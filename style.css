@@ -12,7 +12,7 @@ body {
 }
 
 #nav-bar p {
-    margin: 15px;
+    margin: 10px;
     padding: 5px;
 }
 
@@ -38,7 +38,7 @@ body {
 }
 
 .image-stack {
-    height: 500px;
+    height: 600px;
     width: 100%;
 
     position: absolute;
@@ -48,15 +48,24 @@ body {
 }
 
 #minigames {
-    background-color: red;
+    background-image: url('images/game-photo.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #coding-passion {
-    background-color: blue;
+    background-image: url('images/code-photo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #stunning-websites {
-    background-color: green;
+    background-image: url('images/stunning-web-picture1.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* END OF SUMMARY (SLIDESHOW) */

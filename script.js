@@ -1,7 +1,7 @@
 $(document).ready(function() {
     // NAVIGATION BAR
     $('#nav-bar a').hover(function() {
-        $(this).animate({color: '#800080'}, 200);
+        $(this).animate({color: '#808080'}, 200);
     }, function() {
         $(this).animate({color: '#ffffff'}, 200);
     });
@@ -57,4 +57,10 @@ $(document).ready(function() {
 
     slideshow(websiteSlide, codingSlide, minigameSlide);
     // END OF SUMMARY (SLIDESHOW)
+
+    // ABOUT && SKILLSET
+
+
+
+    // END OF ABOUT && SKILLSET
 });
