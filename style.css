@@ -84,8 +84,6 @@ body {
     border-radius: 10px;
     border: 2px solid white;
 
-    background-color: #333;
-
     position: relative;
     top: 560px;
     display: inline-block;
@@ -96,11 +94,11 @@ body {
 }
 
 .active {
-
+    background-color: #808080;
 }
 
 .not-active {
-
+    background-color: #333;
 }
 
 /* END OF SUMMARY (SLIDESHOW) */
