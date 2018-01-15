@@ -31,7 +31,6 @@ body {
 /* SUMMARY (SLIDESHOW) */
 
 #summary {
-    border: 1px solid black;
     height: 500px;
 
     margin: 0px;
@@ -49,15 +48,15 @@ body {
 }
 
 #minigames {
-
+    background-color: red;
 }
 
 #coding-passion {
-
+    background-color: blue;
 }
 
 #stunning-websites {
-
+    background-color: green;
 }
 
 /* END OF SUMMARY (SLIDESHOW) */
