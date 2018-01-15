@@ -13,27 +13,27 @@ $(document).ready(function() {
     var slideshow = function(topSlide, middleSlide, bottomSlide) {
         // Method to show the top slide
         var showTopSlide = function() {
-            topSlide.show();
-            middleSlide.show();
-            bottomSlide.show();
+            topSlide.fadeIn(1000);
+            middleSlide.fadeIn(2000);
+            bottomSlide.fadeIn(2000);
         }
 
         // Method to show the middle slide
         var showMiddleSlide = function() {
-            topSlide.hide();
-            middleSlide.show();
-            bottomSlide.show();
+            topSlide.fadeOut(1000);
+            middleSlide.fadeIn(1000);
+            bottomSlide.fadeIn(1000);
         }
 
         // Method to show the bottom slide
         var showBottomSlide = function() {
-            topSlide.hide();
-            middleSlide.hide();
-            bottomSlide.show();
+            topSlide.fadeOut(1000);
+            middleSlide.fadeOut(1000);
+            bottomSlide.fadeIn(1000);
         }
 
         var counter = 1;
-        var slideDuration = 5000;
+        var slideDuration = 7000;
 
         // Method to auto-change slides
         var changeSlides = function() {
@@ -48,7 +48,7 @@ $(document).ready(function() {
                 counter = 1;
             }
         }
-        setInterval(changeSlides, slideDuration);
+        //setInterval(changeSlides, slideDuration);
     }
 
     var minigameSlide = $('#minigames');
@@ -56,6 +56,13 @@ $(document).ready(function() {
     var websiteSlide = $('#stunning-websites');
 
     slideshow(websiteSlide, codingSlide, minigameSlide);
+
+    // Styling slideshow controls
+    $('.slideshow-control-button').hover(function() {
+        $(this).animate({backgroundColor: '#808080'}, 200);
+    }, function() {
+        $(this).animate({backgroundColor: '#333'}, 200);
+    });
     // END OF SUMMARY (SLIDESHOW)
 
     // ABOUT && SKILLSET
