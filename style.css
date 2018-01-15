@@ -1,4 +1,29 @@
 body {
     margin: 0px;
     padding: 0px;
+    overflow-x: : hidden;
 }
+
+/* NAVIGATION BAR */
+
+#nav-bar {
+    text-align: center;
+    background-color: #333;
+}
+
+#nav-bar p {
+    margin: 15px;
+    padding: 5px;
+}
+
+#nav-bar a {
+    font-family: "Montserrat";
+    font-size: 20px;
+
+    text-decoration: none;
+    color: white;
+
+    cursor: pointer;
+}
+
+/* END OF NAVIGATION BAR */
