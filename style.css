@@ -27,3 +27,37 @@ body {
 }
 
 /* END OF NAVIGATION BAR */
+
+/* SUMMARY (SLIDESHOW) */
+
+#summary {
+    border: 1px solid black;
+    height: 500px;
+
+    margin: 0px;
+    padding: 0px;
+}
+
+.image-stack {
+    height: 500px;
+    width: 100%;
+
+    position: absolute;
+
+    margin: 0px;
+    padding: 0px;
+}
+
+#minigames {
+
+}
+
+#coding-passion {
+
+}
+
+#stunning-websites {
+
+}
+
+/* END OF SUMMARY (SLIDESHOW) */
