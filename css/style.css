@@ -57,7 +57,7 @@ body {
 }
 
 #coding-passion {
-    background-image: url('images/code-photo.png');
+    background-image: url('images/code-photo2.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -98,6 +98,20 @@ body {
     padding: 0px;
 }
 
+#github-link {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Montserrat", arial;
+
+    margin: 0px;
+    padding: 0px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+}
+
+
 #website-slide-content h1, #website-slide-content h3 {
     color: #333;
     z-index: 9999;
@@ -105,7 +119,7 @@ body {
 
 #coding-slide-content h1, #coding-slide-content h3 {
     color: #ffffff;
-    text-shadow: 1px 1px 10px #808080;
+    text-shadow: 2px 2px 5px black;
     z-index: 9999;
 
     position: relative;
@@ -114,7 +128,7 @@ body {
 
 #minigame-slide-content h1, #minigame-slide-content h3 {
     color: #ffffff;
-    text-shadow: 1px 1px 10px #808080;
+    text-shadow: 1px 1px 5px black;
     z-index: 9999;
 
     position: relative;
@@ -163,7 +177,16 @@ body {
     text-align: center;
 
     margin: 10px;
-    padding: 10px;
+    padding: 5px;
+}
+
+.sub-heading {
+    font-family: "Montserrat", arial;
+    font-size: 25px;
+    text-align: center;
+
+    margin: 10px;
+    padding: 5px;
 }
 
 #photo-of-james {
@@ -195,8 +218,72 @@ body {
 /* JAMES' SKILLSET */
 
 #professional-skillset {
-    height: 500px;
     background-color: #E0E0E0;
+}
+
+.skillset-logo {
+    height: 100px;
+    width: 100px;
+
+    margin: 15px auto;
+
+    border-radius: 15px;
+}
+
+.skill-header {
+    font-family: "Montserrat", arial;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+
+    margin: 10px;
+    padding: 5px;
+}
+
+/* TOP ROW OF SKILLS */
+
+#c-sharp-logo {
+    background-image: url('images/skillset-logos/visual-studio.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#javascript-logo {
+    background-image: url('images/skillset-logos/javascript.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#sql-logo {
+    background-image: url('images/skillset-logos/sql.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* BOTTOM ROW OF SKILLS */
+
+#processing-logo {
+    background-image: url('images/skillset-logos/processing.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#html-css-logo {
+    background-image: url('images/skillset-logos/html.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#p5-logo {
+    background-image: url('images/skillset-logos/p5.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* END OF JAMES' SKILLSET */

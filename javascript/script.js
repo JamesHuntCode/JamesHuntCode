@@ -143,6 +143,13 @@ $(document).ready(function() {
     var codingSlide = $('#coding-passion');
     var websiteSlide = $('#stunning-websites');
     slideshow(websiteSlide, codingSlide, minigameSlide);
+
+    // Link leading user to my github profile
+    $('.slideshow-content a').hover(function () {
+        $(this).animate({color: '#808080'}, 200);
+    }, function() {
+        $(this).animate({color: '#ffffff'}, 200);
+    });
     // END OF SUMMARY (SLIDESHOW)
 
     // ABOUT && SKILLSET
