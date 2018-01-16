@@ -13,6 +13,7 @@ $(document).ready(function() {
     $('#left').addClass('active');
     $('#center').addClass('not-active');
     $('#right').addClass('not-active');
+    $('.slideshow-control-button').hide();
 
     var slideshow = function(topSlide, middleSlide, bottomSlide) {
         // Method to show the top slide
@@ -64,7 +65,14 @@ $(document).ready(function() {
                 counter = 1;
             }
         }
-        setInterval(changeSlides, slideDuration);
+        var slideshowTimer = setInterval(changeSlides, slideDuration);
+
+        // Only show controls when user hovers over slideshow
+        $('#summary').hover(function() {
+            $('.slideshow-control-button').fadeIn(400);
+        }, function() {
+            $('.slideshow-control-button').fadeOut(400);
+        })
 
         // Handle user request to change slide
         $('.slideshow-control-button').on('click', function() {
@@ -72,16 +80,19 @@ $(document).ready(function() {
                 showTopSlide();
                 setSelectedControlTo('#left');
                 setNoLongerSelectedTo('#center', '#right');
+                clearInterval(slideshowTimer);
                 counter = 1;
             } else if ($(this).is('#center')) {
                 showMiddleSlide();
                 setSelectedControlTo('#center');
                 setNoLongerSelectedTo('#left', '#right');
+                clearInterval(slideshowTimer);
                 counter = 2;
             } else {
                 showBottomSlide();
                 setSelectedControlTo('#right');
                 setNoLongerSelectedTo('#left', '#center');
+                clearInterval(slideshowTimer);
                 counter = 3;
             }
         });
