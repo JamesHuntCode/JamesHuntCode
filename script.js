@@ -9,12 +9,25 @@ $(document).ready(function() {
 
     // SUMMARY (SLIDESHOW)
 
-    // Begin slideshow
+    // Prepare content for slideshow
     $('#left').addClass('active');
     $('#center').addClass('not-active');
     $('#right').addClass('not-active');
     $('.slideshow-control-button').hide();
 
+    $('#website-slide-content h1').hide();
+    $('#website-slide-content h3').hide();
+
+    $('#website-slide-content h1').slideDown(1000);
+    $('#website-slide-content h3').delay(1000).slideDown(1000);
+
+    $('#coding-slide-content h1').hide();
+    $('#coding-slide-content h3').hide();
+
+    $('#minigame-slide-content h1').hide();
+    $('#minigame-slide-content h3').hide();
+
+    // Main slideshow method
     var slideshow = function(topSlide, middleSlide, bottomSlide) {
         // Method to show the top slide
         var showTopSlide = function() {
@@ -33,6 +46,10 @@ $(document).ready(function() {
             middleSlide.fadeIn(1000);
             bottomSlide.fadeIn(1000);
 
+            // Introduce content
+            $('#coding-slide-content h1').slideDown(1000);
+            $('#coding-slide-content h3').delay(1000).slideDown(1000);
+
             // Change slide controls
             setSelectedControlTo('#center');
             setNoLongerSelectedTo('#left', '#right');
@@ -43,6 +60,10 @@ $(document).ready(function() {
             topSlide.fadeOut(1000);
             middleSlide.fadeOut(1000);
             bottomSlide.fadeIn(1000);
+
+            // Introduce content
+            $('#minigame-slide-content h1').slideDown(1000);
+            $('#minigame-slide-content h3').delay(1000).slideDown(1000);
 
             // Change slide controls
             setSelectedControlTo('#right');
@@ -56,10 +77,10 @@ $(document).ready(function() {
         var changeSlides = function() {
             if (counter === 1) {
                 showTopSlide();
-                counter += 1;
+                counter++;
             } else if (counter === 2) {
                 showMiddleSlide();
-                counter += 1;
+                counter++;
             } else if (counter == 3) {
                 showBottomSlide();
                 counter = 1;

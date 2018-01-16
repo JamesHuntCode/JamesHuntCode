@@ -17,7 +17,7 @@ body {
 }
 
 #nav-bar a {
-    font-family: "Montserrat";
+    font-family: "Montserrat", arial;
     font-size: 20px;
 
     text-decoration: none;
@@ -72,6 +72,47 @@ body {
 
 #slideshow-controls {
     text-align: center;
+}
+
+.slideshow-content {
+    text-align: center;
+    position: relative;
+    top: 100px;
+}
+
+.slideshow-content h1 {
+    font-size: 60px;
+    font-weight: bold;
+    font-family: "Montserrat", arial;
+
+    margin: 15px;
+    padding: 0px;
+}
+
+.slideshow-content h3 {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Montserrat", arial;
+
+    margin: 0px;
+    padding: 0px;
+}
+
+#website-slide-content h1, #website-slide-content h3 {
+    color: #333;
+    z-index: 9999;
+}
+
+#coding-slide-content h1, #coding-slide-content h3 {
+    color: #ffffff;
+    text-shadow: 1px 1px 10px #808080;
+    z-index: 9999;
+}
+
+#minigame-slide-content h1, #minigame-slide-content h3 {
+    color: #ffffff;
+    text-shadow: 1px 1px 10px #808080;
+    z-index: 9999;
 }
 
 .slideshow-control-button {
