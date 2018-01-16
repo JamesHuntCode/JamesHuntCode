@@ -2,78 +2,141 @@
 <html lang="en">
     <head>
         <title>JamesHuntCode - Home</title>
-        <link type="image/page-logo" href="images/exampleFile.ico" rel="icon"/>
+        <link type="image/page-logo" href="css/images/website-favicon.png" rel="icon"/>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- links to all files && CDN's used -->
         <!-- CSS -->
-        <link href="style.css" type="text/css" rel="stylesheet"/>
+        <link href="css/style.css" type="text/css" rel="stylesheet"/>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
         <!-- JavaScript -->
-        <script src="jquery-3.2.1.min.js" type="text/javascript"></script> <!-- jQuery -->
+        <script src="javascript/jquery-3.2.1.min.js" type="text/javascript"></script> <!-- jQuery -->
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script> <!-- jQuery UI -->
-        <script src="script.js" type="text/javascript"></script>
+        <script src="javascript/script.js" type="text/javascript"></script>
         <!-- links to all fonts (Google) used -->
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"/> <!-- montserrat -->
     </head>
     <body>
         <!-- NAVIGATION BAR -->
-        <div id="nav-bar" class="container-fluid">
-            <!-- HOME -->
-            <div class="col-sm-3">
-                <p><a href="">Home</a></p>
-            </div>
-            <!-- ABOUT JAMES -->
-            <div class="col-sm-3">
-                <p><a href="">About James</a></p>
-            </div>
-            <!-- MY PROJECTS -->
-            <div class="col-sm-3">
-                <p><a href="">James' Projects</a></p>
-            </div>
-            <!-- CONTACT ME (FOOTER) -->
-            <div class="col-sm-3">
-                <p><a href="">Contact James</a></p>
+        <div id="nav-bar">
+            <div class="container-fluid">
+                <!-- HOME -->
+                <div class="col-sm-3">
+                    <p><a href="">Home</a></p>
+                </div>
+                <!-- ABOUT JAMES -->
+                <div class="col-sm-3">
+                    <p><a href="">About James</a></p>
+                </div>
+                <!-- MY PROJECTS -->
+                <div class="col-sm-3">
+                    <p><a href="">James' Projects</a></p>
+                </div>
+                <!-- CONTACT ME (FOOTER) -->
+                <div class="col-sm-3">
+                    <p><a href="">Contact James</a></p>
+                </div>
             </div>
         </div>
         <!-- END OF NAVIGATION BAR -->
 
         <!-- SUMMARY (SLIDESHOW) -->
-        <div id="summary" class="container-fluid">
-            <!-- MINIGAMES -->
-            <div id="minigames" class="image-stack">
-                <div id="minigame-slide-content" class="slideshow-content">
-                    <h1>Arcade & Retro Game Developer</h1>
-                    <h3>Remaking popular titles such as 'Frogger' & 'Defender'</h3>
+        <div id="summary">
+            <div class="contain-fluid">
+                <!-- MINIGAMES -->
+                <div id="minigames" class="image-stack">
+                    <div id="minigame-slide-content" class="slideshow-content">
+                        <h1>Arcade & Retro Game Developer</h1>
+                        <h3>Remaking popular titles such as 'Frogger' & 'Defender'</h3>
+                    </div>
                 </div>
-            </div>
-            <!-- PASSION FOR CODE -->
-            <div id="coding-passion" class="image-stack">
-                <div id="coding-slide-content" class="slideshow-content">
-                    <h1>Passion For Software Engineering</h1>
-                    <h3>See My Code Here: GitHub.com/JamesHuntCode</h3>
+                <!-- PASSION FOR CODE -->
+                <div id="coding-passion" class="image-stack">
+                    <div id="coding-slide-content" class="slideshow-content">
+                        <h1>Passion For Software Engineering</h1>
+                        <h3>See James' Code Here: GitHub.com/JamesHuntCode</h3>
+                    </div>
                 </div>
-            </div>
-            <!-- STUNNING WEB DESIGN -->
-            <div id="stunning-websites" class="image-stack">
-                <div id="website-slide-content" class="slideshow-content">
-                    <h1>Experienced Web Developer</h1>
-                    <h3>Stunning & User Friendly Designs</h3>
+                <!-- STUNNING WEB DESIGN -->
+                <div id="stunning-websites" class="image-stack">
+                    <div id="website-slide-content" class="slideshow-content">
+                        <h1>Experienced Web Developer</h1>
+                        <h3>Stunning & User Friendly Designs</h3>
+                    </div>
                 </div>
-            </div>
-            <!-- SLIDESHOW CONTROLS -->
-            <div id="slideshow-controls">
-                <div id="left" class="slideshow-control-button"></div>
-                <div id="center" class="slideshow-control-button"></div>
-                <div id="right" class="slideshow-control-button"></div>
+                <!-- SLIDESHOW CONTROLS -->
+                <div id="slideshow-controls">
+                    <div id="left" class="slideshow-control-button"></div>
+                    <div id="center" class="slideshow-control-button"></div>
+                    <div id="right" class="slideshow-control-button"></div>
+                </div>
             </div>
         </div>
         <!-- END OF SUMMARY (SLIDESHOW) -->
-
+        <div id="spacer"></div>
         <!-- ABOUT JAMES & PROFESSIONAL SKILLSET -->
-        <div>
-
+        <!-- ABOUT JAMES -->
+        <div id="about-james">
+            <h1 id="about-james-header" class="main-heading">About James Hunt</h1>
+            <div class="container-fluid">
+                <!-- PHOTO OF JAMES -->
+                <div class="col-sm-4">
+                    <div id="photo-of-james"></div>
+                </div>
+                <!-- INFORMATION ABOUT JAMES -->
+                <div class="col-sm-8">
+                    <p id="info-about-james">
+                        James is currently studying BSc(Hons) Computing at the University of Plymouth.
+                        At the moment he is completing his first year aiming to finish with a 1st.
+                        <br/>
+                        <br/>
+                        James is originally from Plymouth, United Kingdom with family based in the United States of America.
+                        As well as studying for his degree in Computing, James is also the Chairman & Co-Founder of the Plymouth University Computer/Computing Society.
+                        James also volunteers weekly at Plymouth Central Library to help out with 'Hello World', a coding club aimed at young children.
+                        This is because James recognises the importance of introducing code and technology to a younger audience.
+                        <br/>
+                        <br/>
+                        James has been programming incessantly over the last five years, often making websites and remaking arcade games he played during his childhood.
+                        <br/>
+                        <br/>
+                        James currently shows significant interest in desktop application development and client side web scripting.
+                    </p>
+                </div>
+            </div>
         </div>
+        <!-- END OF ABOUT JAMES -->
+        <!-- JAMES' SKILLSET -->
+        <div id="professional-skillset">
+            <h1 class="main-heading">James' Professional Skillset</h1>
+            <!-- TOP ROW -->
+            <div class="container-fluid">
+                <div class="col-sm-6">
+
+                </div>
+                <div class="col-sm-6">
+
+                </div>
+            </div>
+            <!-- MIDDLE ROW -->
+            <div class="container-fluid">
+                <div class="col-sm-6">
+
+                </div>
+                <div class="col-sm-6">
+
+                </div>
+            </div>
+            <!-- BOTTOM ROW -->
+            <div class="container-fluid">
+                <div class="col-sm-6">
+
+                </div>
+                <div class="col-sm-6">
+
+                </div>
+            </div>
+        </div>
+        <!-- END OF JAMES' SKILLSET -->
         <!-- END OF ABOUT & PROFESSIONAL SKILLSET -->
 
         <!-- MY PROJECTS -->
