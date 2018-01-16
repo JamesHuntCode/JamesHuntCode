@@ -154,7 +154,74 @@ $(document).ready(function() {
 
     // ABOUT && SKILLSET
 
+    $('.github-repo-link').hover(function () {
+        $(this).animate({color: '#808080'}, 200);
+    }, function() {
+        $(this).animate({color: '#333'}, 200);
+    });
 
+    // Prepare document for reveal of skills on scroll
+    var topSkillLogos = [$('#c-sharp-logo'), $('#javascript-logo'), $('#sql-logo')];
+    var topSkillHeaders = [$('#c-sharp-header'), $('#javascript-header'), $('#sql-header')];
+    var topSkillSummaries = [$('#c-sharp-summary'), $('#javascript-summary'), $('#sql-summary')];
+    var topGitLinks = [$('#c-sharp-link'), $('#js-link'), $('#sql-link')];
+
+    var bottomSkillLogos = [$('#processing-logo'), $('#html-css-logo'), $('#p5-logo')];
+    var bottomSkillHeaders = [$('#processing-header'), $('#html-css-header'), $('#p5-header')];
+    var bottomSkillSummaries = [$('#processing-summary'), $('#html-css-summary'), $('#p5-summary')];
+    var bottomGitLinks = [$('#processing-link'), $('#html-css-link'), $('#p5-link')];
+
+    // Keep skillset content hidden initially
+    for (let i = 0; i < 3; i++) {
+        topSkillLogos[i].hide();
+        topSkillHeaders[i].hide();
+        topSkillSummaries[i].hide();
+        topGitLinks[i].hide();
+
+        bottomSkillLogos[i].hide();
+        bottomSkillHeaders[i].hide();
+        bottomSkillSummaries[i].hide();
+        bottomGitLinks[i].hide();
+    }
+
+    // Method to reveal skill set to user
+    var revealSkills = function() {
+        // Revealing the top layer of skills
+        var dropReveal = function(arr) {
+            for (let i = 0; i < arr.length; i++) {
+                arr[i].fadeIn(1500);
+            }
+        }
+
+        // Start cycle
+        var topContent = [topSkillLogos, topSkillHeaders, topSkillSummaries, topGitLinks];
+        var bottomContent = [bottomSkillLogos, bottomSkillHeaders, bottomSkillSummaries, bottomGitLinks];
+        var allContent = [topContent, bottomContent];
+
+        var interval = 250;
+
+        for (let i = 0; i < allContent.length; i++) {
+            for (let j = 0; j < allContent[0].length; j++) {
+                dropReveal(allContent[i][j]);
+            }
+        }
+    }
+
+    // Method to check if a certain element is visible to the user
+    var checkIfOnScreen = function(elem) {
+        var currentPos = elem.offset();
+        var currentTop = currentPos.top - $(window).scrollTop();
+        var screenHeight = $(window).height();
+
+        return (currentTop > screenHeight) ? false : true;
+    }
+
+    // Tracking when to fire event to reveal skillset
+    $(document).scroll(function() {
+        if(checkIfOnScreen($('#professional-skillset'))) {
+            revealSkills();
+        }
+    });
 
     // END OF ABOUT && SKILLSET
 });

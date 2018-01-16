@@ -232,12 +232,45 @@ body {
 
 .skill-header {
     font-family: "Montserrat", arial;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
     text-align: center;
 
     margin: 10px;
     padding: 5px;
+}
+
+.skill-text-summary {
+    text-align: center;
+
+    font-family: "Montserrat", arial;
+    font-size: 16px;
+
+    margin: 10px;
+    padding: 10px;
+}
+
+.github-repo-link-wrapper {
+    text-align: center;
+}
+
+.github-repo-link {
+    font-family: "Montserrat", arial;
+    font-size: 16px;
+    font-weight: bold;
+
+    margin: 10px;
+    padding: 10px;
+
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+}
+
+.github-repo-link:hover {
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
 }
 
 /* TOP ROW OF SKILLS */
