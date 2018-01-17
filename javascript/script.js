@@ -1,4 +1,23 @@
 $(document).ready(function() {
+    // Tracking when to fire certain events
+    $(document).scroll(function() {
+        // Check if skills are visible by user
+        if(checkIfOnScreen($('#professional-skillset'))) {
+            revealSkills();
+        }
+        // Check if recent projects are visible by user
+
+    });
+
+    // Method to check if a certain element is visible to the user
+    var checkIfOnScreen = function(elem) {
+        var currentPos = elem.offset();
+        var currentTop = currentPos.top - $(window).scrollTop();
+        var screenHeight = $(window).height();
+
+        return (currentTop > screenHeight) ? false : true;
+    }
+
     // NAVIGATION BAR
     $('#nav-bar a').hover(function() {
         $(this).animate({color: '#808080'}, 200);
@@ -198,22 +217,6 @@ $(document).ready(function() {
         }
     }
 
-    // Method to check if a certain element is visible to the user
-    var checkIfOnScreen = function(elem) {
-        var currentPos = elem.offset();
-        var currentTop = currentPos.top - $(window).scrollTop();
-        var screenHeight = $(window).height();
-
-        return (currentTop > screenHeight) ? false : true;
-    }
-
-    // Tracking when to fire event to reveal skillset
-    $(document).scroll(function() {
-        if(checkIfOnScreen($('#professional-skillset'))) {
-            revealSkills();
-        }
-    });
-
     // END OF ABOUT && SKILLSET
 
     // MY RECENT PROJECTS
@@ -221,4 +224,14 @@ $(document).ready(function() {
 
 
     // END OF MY RECENT PROJECTS
+
+    // FOOTER
+
+    $('#footer a').hover(function() {
+        $(this).animate({color: '#808080'}, 200);
+    }, function() {
+        $(this).animate({color: '#ffffff'}, 200);
+    });
+
+    // END OF FOOTER
 });

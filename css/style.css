@@ -362,3 +362,65 @@ body {
 
 
 /* END OF MY RECENT PROJECTS */
+
+/* FOOTER */
+
+#footer {
+    background-color: #333;
+}
+
+.footer-header {
+    font-family: "Montserrat", arial;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+
+    margin: 10px;
+    padding: 5px;
+}
+
+#footer p {
+    text-align: center;
+    font-family: "Montserrat", arial;
+    font-size: 14px;
+    color: white;
+
+    margin: 15px 15px 0px 15px;
+    padding: 15px 15px 0px 15px;
+}
+
+#footer a {
+    font-family: "Montserrat", arial;
+    font-size: 14px;
+    color: white;
+
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#src-code {
+    text-align: center;
+
+    font-family: "Montserrat", arial;
+    font-size: 12px;
+    color: white;
+
+    margin: 0px;
+    padding: 0px;
+}
+
+#src-code-link {
+    text-align: center;
+
+    font-family: "Montserrat", arial;
+    font-size: 12px;
+    color: white;
+
+    text-decoration: none;
+    cursor: pointer;
+
+    margin: 0px;
+    padding: 0px;
+}
+
+/* END OF FOOTER */
