@@ -238,8 +238,12 @@ $(document).ready(function() {
     // END OF ABOUT && SKILLSET
 
     // MY RECENT PROJECTS
+    //$('#bottom-4-projects').hide();
 
+    $('#drop-down-button').on('click', function() {
+        $(this).toggleClass('rotated');
 
+    });
 
     // END OF MY RECENT PROJECTS
 
