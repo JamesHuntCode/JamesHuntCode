@@ -378,7 +378,16 @@ body {
     padding: 5px;
 }
 
-.language-used-header span {
+.language-used-header-lower {
+    font-family: "Montserrat", arial;
+    font-size: 20px;
+    text-align: center;
+
+    margin: 10px 10px 10px 10px;
+    padding: 5px 5px 5px 5px;
+}
+
+.language-used-header span, .language-used-header-lower span {
     font-weight: bold;
 }
 
@@ -429,9 +438,19 @@ body {
     background-repeat: no-repeat;
 }
 
+#direct-user-down {
+    text-align: center;
+
+    font-family: "Montserrat", arial;
+    font-size: 14px;
+    font-weight: bold;
+
+    margin: 5px;
+}
+
 #drop-down-button {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
 
     margin: 10px auto;
 
@@ -458,6 +477,23 @@ body {
 #bottom-4-projects {
     background-color: #E0E0E0;
     padding: 5px 0px 20px 0px;
+}
+
+#view-all {
+    text-align: center;
+
+    font-family: "Montserrat", arial;
+    font-size: 16px;
+    font-weight: bold;
+
+    margin: 10px 10px 0px 10px;
+    padding: 5px 5px 0px 10px;
+}
+
+#view-all a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #333;
 }
 
 /* END OF MY RECENT PROJECTS */

@@ -238,11 +238,29 @@ $(document).ready(function() {
     // END OF ABOUT && SKILLSET
 
     // MY RECENT PROJECTS
-    //$('#bottom-4-projects').hide();
+
+    // Code handling the user requesting to see more projects
+    $('#bottom-4-projects').hide();
+
+    var currentContent = $('#direct-user-down').text();
 
     $('#drop-down-button').on('click', function() {
         $(this).toggleClass('rotated');
+        // Dynamically change user instructions
+        if (currentContent.toLowerCase() === "want to see more? click below!") {
+            $('#direct-user-down').html("Click again to hide extra content.");
+            currentContent = "Click again to hide content.";
+        } else {
+            $('#direct-user-down').html("Want to see more? Click below!");
+            currentContent = "Want to see more? Click below!";
+        }
+        $('#bottom-4-projects').slideToggle(800);
+    });
 
+    $('#view-all a').hover(function() {
+        $(this).animate({color: '#808080'}, 200);
+    }, function() {
+        $(this).animate({color: '#333'}, 200);
     });
 
     // END OF MY RECENT PROJECTS
