@@ -32,7 +32,6 @@ $(document).ready(function() {
     $('#left').addClass('active');
     $('#center').addClass('not-active');
     $('#right').addClass('not-active');
-    $('.slideshow-control-button').hide();
 
     $('#website-slide-content h1').hide();
     $('#website-slide-content h3').hide();
@@ -107,10 +106,29 @@ $(document).ready(function() {
         var slideshowTimer = setInterval(changeSlides, 7000);
 
         // Only show controls when user hovers over slideshow
+        var slideControls = [$('#left'), $('#center'), $('#right')];
+
+        for (let i = 0; i < slideControls.length; i++) {
+            slideControls[i].css('opacity', 0);
+        }
+
+        var offsetEase;
+        var looping = false;
+
         $('#summary').hover(function() {
-            $('.slideshow-control-button').fadeIn(400);
+            if (!looping) { offsetEase = 0 };
+            for (let i = 0; i < slideControls.length; i++) {
+                slideControls[i].delay(offsetEase).animate({opacity: '1'}, 400);
+                offsetEase += 100;
+                looping = true;
+            }
+            looping = false;
         }, function() {
-            $('.slideshow-control-button').fadeOut(400);
+            offsetEase = 0;
+            for (let i = 0; i < slideControls.length; i++) {
+                slideControls[i].delay(offsetEase).animate({opacity: '0'}, 400);
+                offsetEase += 100;
+            }
         })
 
         // Handle user request to change slide
