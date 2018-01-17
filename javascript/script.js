@@ -171,17 +171,13 @@ $(document).ready(function() {
     var bottomSkillSummaries = [$('#processing-summary'), $('#html-css-summary'), $('#p5-summary')];
     var bottomGitLinks = [$('#processing-link'), $('#html-css-link'), $('#p5-link')];
 
-    // Keep skillset content hidden initially
-    for (let i = 0; i < 3; i++) {
-        topSkillLogos[i].css('opacity', '0');
-        topSkillHeaders[i].css('opacity', '0');
-        topSkillSummaries[i].css('opacity', '0');
-        topGitLinks[i].css('opacity', '0');
+    var allSkillBasedContent = [topSkillLogos, topSkillHeaders, topSkillSummaries, topGitLinks, bottomSkillLogos, bottomSkillHeaders, bottomSkillSummaries, bottomGitLinks];
 
-        bottomSkillLogos[i].css('opacity', '0');
-        bottomSkillHeaders[i].css('opacity', '0');
-        bottomSkillSummaries[i].css('opacity', '0');
-        bottomGitLinks[i].css('opacity', '0');
+    // Keep skillset content hidden initially
+    for (let i = 0; i < allSkillBasedContent.length; i++) {
+        for (let j = 0; j < allSkillBasedContent[i].length; j++) {
+            allSkillBasedContent[i][j].css('opacity', 0);
+        }
     }
 
     // Method to reveal skill set to user
@@ -189,22 +185,16 @@ $(document).ready(function() {
         // Dynamic reveal of skills on scroll
         var interval = 0;
 
-        var fadeReveal = function(arr) {
-            for (let i = 0; i < arr.length; i++) {
-                arr[i].delay(interval).animate({opacity: '1'}, 500);
+        var fadeReveal = function(elements) {
+            for (let i = 0; i < elements.length; i++) {
+                elements[i].delay(interval).animate({opacity: '1'}, 500);
                 interval += 100;
             }
         }
 
         // Start cycle
-        var topContent = [topSkillLogos, topSkillHeaders, topSkillSummaries, topGitLinks];
-        var bottomContent = [bottomSkillLogos, bottomSkillHeaders, bottomSkillSummaries, bottomGitLinks];
-        var allContent = [topContent, bottomContent];
-
-        for (let i = 0; i < allContent.length; i++) {
-            for (let j = 0; j < allContent[0].length; j++) {
-                fadeReveal(allContent[i][j]);
-            }
+        for (let i = 0; i < allSkillBasedContent.length; i++) {
+            fadeReveal(allSkillBasedContent[i]);
         }
     }
 
@@ -228,7 +218,7 @@ $(document).ready(function() {
 
     // MY RECENT PROJECTS
 
-    
+
 
     // END OF MY RECENT PROJECTS
 });
