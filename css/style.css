@@ -98,7 +98,9 @@ body {
     padding: 0px;
 }
 
-#github-link {
+/* code repetition due to issues with CSS classes */
+
+#github-profile-link {
     font-size: 30px;
     font-weight: bold;
     font-family: "Montserrat", arial;
@@ -109,8 +111,41 @@ body {
     color: #ffffff;
 
     text-decoration: none;
+
+    cursor: pointer;
 }
 
+#github-frogger-link {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Montserrat", arial;
+
+    margin: 0px;
+    padding: 0px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+#github-defender-link {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Montserrat", arial;
+
+    margin: 0px;
+    padding: 0px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+/* end of repeated code */
 
 #website-slide-content h1, #website-slide-content h3 {
     color: #333;
