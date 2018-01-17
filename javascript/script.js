@@ -173,23 +173,26 @@ $(document).ready(function() {
 
     // Keep skillset content hidden initially
     for (let i = 0; i < 3; i++) {
-        topSkillLogos[i].hide();
-        topSkillHeaders[i].hide();
-        topSkillSummaries[i].hide();
-        topGitLinks[i].hide();
+        topSkillLogos[i].css('opacity', '0');
+        topSkillHeaders[i].css('opacity', '0');
+        topSkillSummaries[i].css('opacity', '0');
+        topGitLinks[i].css('opacity', '0');
 
-        bottomSkillLogos[i].hide();
-        bottomSkillHeaders[i].hide();
-        bottomSkillSummaries[i].hide();
-        bottomGitLinks[i].hide();
+        bottomSkillLogos[i].css('opacity', '0');
+        bottomSkillHeaders[i].css('opacity', '0');
+        bottomSkillSummaries[i].css('opacity', '0');
+        bottomGitLinks[i].css('opacity', '0');
     }
 
     // Method to reveal skill set to user
     var revealSkills = function() {
-        // Revealing the top layer of skills
-        var dropReveal = function(arr) {
+        // Dynamic reveal of skills on scroll
+        var interval = 0;
+
+        var fadeReveal = function(arr) {
             for (let i = 0; i < arr.length; i++) {
-                arr[i].fadeIn(1500);
+                arr[i].delay(interval).animate({opacity: '1'}, 500);
+                interval += 100;
             }
         }
 
@@ -198,11 +201,9 @@ $(document).ready(function() {
         var bottomContent = [bottomSkillLogos, bottomSkillHeaders, bottomSkillSummaries, bottomGitLinks];
         var allContent = [topContent, bottomContent];
 
-        var interval = 250;
-
         for (let i = 0; i < allContent.length; i++) {
             for (let j = 0; j < allContent[0].length; j++) {
-                dropReveal(allContent[i][j]);
+                fadeReveal(allContent[i][j]);
             }
         }
     }
@@ -224,4 +225,10 @@ $(document).ready(function() {
     });
 
     // END OF ABOUT && SKILLSET
+
+    // MY RECENT PROJECTS
+
+    
+
+    // END OF MY RECENT PROJECTS
 });
