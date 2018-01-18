@@ -1,8 +1,14 @@
 $(document).ready(function() {
     // Tracking when to fire certain events
-    function runInitialCheck() {
+    var runInitialCheck = function() {
+        // Check skills
         if(checkIfOnScreen($('#professional-skillset'))) {
             revealSkills();
+        }
+
+        // Check projects
+        if(checkIfOnScreen($('#top-3-projects'))) {
+            displayProjects(topImages, true);
         }
     }
     var runningChecks = setTimeout(runInitialCheck, 10);
@@ -12,6 +18,11 @@ $(document).ready(function() {
         // Check if skills are visible by user
         if(checkIfOnScreen($('#professional-skillset'))) {
             revealSkills();
+        }
+
+        // Check if projects are visible by user
+        if(checkIfOnScreen($('#top-3-projects'))) {
+            displayProjects(topImages, true);
         }
     });
 
@@ -244,6 +255,54 @@ $(document).ready(function() {
 
     // MY RECENT PROJECTS
 
+    // Code handling reveal of initial 3 projects
+    var topImages = [$('#defender-img'), $('#doodle-jump-img'), $('#galaga-img')];
+    var bottomImages = [$('#job-app-img'), $('#flappy-bird-img'), $('#pong-img'), $('#car-hire-img')];
+
+    // Method to display project images
+    var displayProjects = function(elems, top) {
+        var growthOffset;
+
+        if (top) {
+            growthOffset = 0;
+            for (let i = 0; i < elems.length; i++) {
+                elems[i].delay(growthOffset).queue(function(next) {
+                    elems[i].addClass('full-size-top');
+                });
+                growthOffset += 175;
+            }
+        } else {
+            setTimeout(function() {
+                for (let i = 0; i < elems.length; i++) {
+                    elems[i].addClass('full-size-bottom');
+                }
+            }, 300);
+        }
+
+        growthOffset = 0;
+    }
+
+    // Method to shrink off project images
+    var hideProjects = function(elems, top) {
+        var shrinkOffset;
+
+        if (top) {
+            shrinkOffset = 0;
+            for (let i = 0; i < elems.length; i++) {
+                elems[i].delay(shrinkOffset).queue(function(next) {
+                    elems[i].removeClass('full-size-top');
+                    shrinkOffset += 175;
+                });
+            }
+        } else {
+            for (let i = 0; i < elems.length; i++) {
+                elems[i].removeClass('full-size-bottom');
+            }
+        }
+
+        shrinkOffset = 0;
+    }
+
     // Code handling the user requesting to see more projects
     $('#bottom-4-projects').hide();
 
@@ -255,9 +314,11 @@ $(document).ready(function() {
         if (currentContent.toLowerCase() === "want to see more? click below!") {
             $('#direct-user-down').html("Click again to hide extra content.");
             currentContent = "Click again to hide content.";
+            displayProjects(bottomImages, false);
         } else {
             $('#direct-user-down').html("Want to see more? Click below!");
             currentContent = "Want to see more? Click below!";
+            hideProjects(bottomImages, false);
         }
         $('#bottom-4-projects').slideToggle(800);
     });
