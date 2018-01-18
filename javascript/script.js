@@ -63,14 +63,22 @@ $(document).ready(function() {
     $('#minigame-slide-content h3').hide();
 
     var slideshowTimer;
+    var running;
+
     // Main slideshow method
     var slideshow = function(topSlide, middleSlide, bottomSlide) {
+        running = true;
         // Method to show the top slide
         var showTopSlide = function() {
-            topSlide.fadeIn(1000);
-            middleSlide.fadeIn(2000);
-            bottomSlide.fadeIn(2000);
-
+            if (running) {
+                topSlide.hide();
+                topSlide.show("slide", {direction: "right"}, 1000);
+                bottomSlide.hide("slide", {direction: "left"}, 1000);
+            } else {
+                topSlide.show("slide", {direction: "right"}, 1000);
+                middleSlide.hide("slide", {direction: "left"}, 1000);
+                bottomSlide.hide("slide", {direction: "left"}, 1000);
+            }
 
             // Change slide controls
             setSelectedControlTo('#left');
@@ -79,11 +87,20 @@ $(document).ready(function() {
 
         // Method to show the middle slide
         var showMiddleSlide = function() {
-            topSlide.fadeOut(1000);
+            if (running) {
+                middleSlide.hide();
+                middleSlide.show("slide", {direction: "right"}, 1000);
+                topSlide.hide("slide", {direction: "left"}, 1000);
+            } else {
+                middleSlide.hide();
+                middleSlide.show("slide", {direction: "right"}, 1000);
+                topSlide.hide("slide", {direction: "left"}, 1000);
+                bottomSlide.hide("slide", {direction: "left"}, 1000);
+            }
 
             // Introduce content
-            $('#coding-slide-content h1').slideDown(1000);
-            $('#coding-slide-content h3').delay(1000).slideDown(1000);
+            $('#coding-slide-content h1').delay(1000).slideDown(1000);
+            $('#coding-slide-content h3').delay(2000).slideDown(1000);
 
             // Change slide controls
             setSelectedControlTo('#center');
@@ -92,11 +109,19 @@ $(document).ready(function() {
 
         // Method to show the bottom slide
         var showBottomSlide = function() {
-            middleSlide.fadeOut(1000);
+            if (running) {
+                bottomSlide.show("slide", {direction: "right"}, 1000);
+                middleSlide.hide("slide", {direction: "left"}, 1000);
+            } else {
+                bottomSlide.hide();
+                bottomSlide.show("slide", {direction: "right"}, 1000);
+                topSlide.hide("slide", {direction: "left"}, 1000);
+                middleSlide.hide("slide", {direction: "left"}, 1000);
+            }
 
             // Introduce content
-            $('#minigame-slide-content h1').slideDown(1000);
-            $('#minigame-slide-content h3').delay(1000).slideDown(1000);
+            $('#minigame-slide-content h1').delay(1000).slideDown(1000);
+            $('#minigame-slide-content h3').delay(2000).slideDown(1000);
 
             // Change slide controls
             setSelectedControlTo('#right');
@@ -149,6 +174,7 @@ $(document).ready(function() {
 
         // Handle user request to change slide
         $('.slideshow-control-button').on('click', function() {
+            running = false;
             if ($(this).is('#left')) {
                 clearInterval(slideshowTimer);
                 showTopSlide();
@@ -276,7 +302,7 @@ $(document).ready(function() {
                 for (let i = 0; i < elems.length; i++) {
                     elems[i].addClass('full-size-bottom');
                 }
-            }, 300);
+            }, 200);
         }
 
         growthOffset = 0;
