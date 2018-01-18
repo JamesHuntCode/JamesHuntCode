@@ -281,8 +281,8 @@ body {
     font-family: "Montserrat", arial;
     font-size: 16px;
 
-    margin: 10px;
-    padding: 10px;
+    margin: 10px 10px 0px 10px;
+    padding: 10px 10px 0px 10px;
 }
 
 .github-repo-link-wrapper {
@@ -294,12 +294,12 @@ body {
     font-size: 16px;
     font-weight: bold;
 
-    margin: 10px;
-    padding: 10px;
-
     text-decoration: none;
     color: #333;
     cursor: pointer;
+
+    margin: 0px;
+    padding: 0px;
 }
 
 .github-repo-link:hover {

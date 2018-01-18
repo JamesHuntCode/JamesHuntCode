@@ -1,12 +1,19 @@
 $(document).ready(function() {
     // Tracking when to fire certain events
+    function runInitialCheck() {
+        if(checkIfOnScreen($('#professional-skillset'))) {
+            revealSkills();
+            clearInterval(runningChecks);
+        }
+    }
+    var runningChecks = setInterval(runInitialCheck, 10);
+
+    // Check what content is visible on user scroll
     $(document).scroll(function() {
         // Check if skills are visible by user
         if(checkIfOnScreen($('#professional-skillset'))) {
             revealSkills();
         }
-        // Check if recent projects are visible by user
-
     });
 
     // Method to check if a certain element is visible to the user
