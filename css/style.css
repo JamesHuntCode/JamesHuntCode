@@ -479,6 +479,34 @@ body {
     padding: 5px 0px 20px 0px;
 }
 
+#job-app-img {
+    background-image: url('images/game-shots/job-app.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#flappy-bird-img {
+    background-image: url('images/game-shots/flappy-bird.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#pong-img {
+    background-image: url('images/game-shots/pong.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#car-hire-img {
+    background-image: url('images/game-shots/car-hire.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 #view-all {
     text-align: center;
 
