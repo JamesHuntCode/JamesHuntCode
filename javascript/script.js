@@ -3,10 +3,9 @@ $(document).ready(function() {
     function runInitialCheck() {
         if(checkIfOnScreen($('#professional-skillset'))) {
             revealSkills();
-            clearInterval(runningChecks);
         }
     }
-    var runningChecks = setInterval(runInitialCheck, 10);
+    var runningChecks = setTimeout(runInitialCheck, 10);
 
     // Check what content is visible on user scroll
     $(document).scroll(function() {
