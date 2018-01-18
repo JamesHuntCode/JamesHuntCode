@@ -51,6 +51,7 @@ $(document).ready(function() {
     $('#minigame-slide-content h1').hide();
     $('#minigame-slide-content h3').hide();
 
+    var slideshowTimer;
     // Main slideshow method
     var slideshow = function(topSlide, middleSlide, bottomSlide) {
         // Method to show the top slide
@@ -58,6 +59,7 @@ $(document).ready(function() {
             topSlide.fadeIn(1000);
             middleSlide.fadeIn(2000);
             bottomSlide.fadeIn(2000);
+
 
             // Change slide controls
             setSelectedControlTo('#left');
@@ -67,8 +69,6 @@ $(document).ready(function() {
         // Method to show the middle slide
         var showMiddleSlide = function() {
             topSlide.fadeOut(1000);
-            middleSlide.fadeIn(1000);
-            bottomSlide.fadeIn(1000);
 
             // Introduce content
             $('#coding-slide-content h1').slideDown(1000);
@@ -81,9 +81,7 @@ $(document).ready(function() {
 
         // Method to show the bottom slide
         var showBottomSlide = function() {
-            topSlide.fadeOut(1000);
             middleSlide.fadeOut(1000);
-            bottomSlide.fadeIn(1000);
 
             // Introduce content
             $('#minigame-slide-content h1').slideDown(1000);
@@ -94,22 +92,23 @@ $(document).ready(function() {
             setNoLongerSelectedTo('#left', '#center');
         }
 
-        var counter = 1;
+        var counter = 2;
 
         // Method to auto-change slides
         var changeSlides = function() {
             if (counter === 1) {
                 showTopSlide();
-                counter = 2;
+                counter++;
             } else if (counter === 2) {
                 showMiddleSlide();
-                counter = 3;
+                counter++;
             } else if (counter == 3) {
                 showBottomSlide();
                 counter = 1;
             }
         }
-        var slideshowTimer = setInterval(changeSlides, 7000);
+        clearInterval(slideshowTimer);
+        slideshowTimer = setInterval(changeSlides, 7000);
 
         // Only show controls when user hovers over slideshow
         var slideControls = [$('#left'), $('#center'), $('#right')];
@@ -140,22 +139,22 @@ $(document).ready(function() {
         // Handle user request to change slide
         $('.slideshow-control-button').on('click', function() {
             if ($(this).is('#left')) {
+                clearInterval(slideshowTimer);
                 showTopSlide();
                 setSelectedControlTo('#left');
                 setNoLongerSelectedTo('#center', '#right');
-                clearInterval(slideshowTimer);
                 counter = 1;
             } else if ($(this).is('#center')) {
+                clearInterval(slideshowTimer);
                 showMiddleSlide();
                 setSelectedControlTo('#center');
                 setNoLongerSelectedTo('#left', '#right');
-                clearInterval(slideshowTimer);
                 counter = 2;
             } else {
+                clearInterval(slideshowTimer);
                 showBottomSlide();
                 setSelectedControlTo('#right');
                 setNoLongerSelectedTo('#left', '#center');
-                clearInterval(slideshowTimer);
                 counter = 3;
             }
         });
