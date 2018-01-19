@@ -1,13 +1,13 @@
 $(document).ready(function() {
-    // Tracking when to fire certain events
+    // Method to run page scale check and reveal sections if already visible by user
     var runInitialCheck = function() {
-        // Check skills
-        if(checkIfOnScreen($('#professional-skillset'))) {
+        // Check skill set section
+        if (checkIfOnScreen($('#professional-skillset'))) {
             revealSkills();
         }
 
-        // Check projects
-        if(checkIfOnScreen($('#top-3-projects'))) {
+        // Check recent projects section
+        if (checkIfOnScreen($('#top-3-projects'))) {
             displayProjects(topImages, true);
         }
     }
@@ -16,31 +16,91 @@ $(document).ready(function() {
     // Check what content is visible on user scroll
     $(document).scroll(function() {
         // Check if skills are visible by user
-        if(checkIfOnScreen($('#professional-skillset'))) {
+        if (checkIfOnScreen($('#professional-skillset'))) {
             revealSkills();
         }
 
         // Check if projects are visible by user
-        if(checkIfOnScreen($('#top-3-projects'))) {
+        if (checkIfOnScreen($('#top-3-projects'))) {
             displayProjects(topImages, true);
         }
     });
 
-    // Method to check if a certain element is visible to the user
+    // Method to check if a certain element is visible by the user
     var checkIfOnScreen = function(elem) {
-        var currentPos = elem.offset();
-        var currentTop = currentPos.top - $(window).scrollTop();
-        var screenHeight = $(window).height();
+        var element = elem;
+        var viewport = $(window);
 
-        return (currentTop > screenHeight) ? false : true;
+        var docViewBottom = viewport.scrollTop() + viewport.height();
+
+        var elemTop = element.offset().top;
+
+        return (elemTop >= docViewBottom);
+    }
+
+    var slideshowNotVisible = function() {
+        var topOfWindow = $(window).scrollTop();
+
+        var navbarHeight = $('#nav-bar').height();
+        var slideshowHeight = $('#summary').height();
+        var spacerHeight = $('#spacer').height();
+
+        var totalHeight = Number(navbarHeight) + Number(slideshowHeight) + Number(spacerHeight);
+
+        return (Number(topOfWindow) >= totalHeight);
     }
 
     // NAVIGATION BAR
+
     $('#nav-bar a').hover(function() {
         $(this).animate({color: '#808080'}, 200);
     }, function() {
         $(this).animate({color: '#ffffff'}, 200);
     });
+
+    $('#nav-bar a').on('click', function() {
+        switch ($(this).text().toUpperCase()) {
+            case "ABOUT JAMES":
+                sendUserTo("about-james");
+            break;
+            case "JAMES' SKILLS":
+                sendUserTo("james-skills");
+            break;
+            case "JAMES' PROJECTS":
+                sendUserTo("james-projects");
+            break;
+            case "CONTACT JAMES":
+                sendUserTo("email-james");
+            break;
+        }
+    });
+
+    // Method used to scroll the page to a specific location
+    var sendUserTo = function(location) {
+        var selectedElem;
+
+        switch (location) {
+            case "about-james":
+                selectedElem = $('#about-james');
+            break;
+            case "james-skills":
+                selectedElem = $('#professional-skillset');
+            break;
+            case "james-projects":
+                selectedElem = $('#james-recent-projects');
+            break;
+            case "email-james":
+                selectedElem = $('#contact-james');
+            break;
+        }
+
+        var scrollTo = function(where) {
+            $('html, body').animate({scrollTop: where.offset().top}, 1000);
+        }
+
+        scrollTo(selectedElem);
+    }
+
     // END OF NAVIGATION BAR
 
     // SUMMARY (SLIDESHOW)
@@ -64,10 +124,45 @@ $(document).ready(function() {
 
     var slideshowTimer;
     var running;
+    var paused;
+    var initialLoop;
 
     // Main slideshow method
     var slideshow = function(topSlide, middleSlide, bottomSlide) {
         running = true;
+        paused = false;
+        initialLoop = true;
+
+        // Pause slideshow if it has left user's viewport
+        $(document).scroll(function() {
+            if (slideshowNotVisible()) {
+                // Stop slideshow in here
+                clearInterval(slideshowTimer);
+                paused = true;
+            } else {
+                paused = false;
+                if (running && !paused) {
+                    clearInterval(slideshowTimer);
+                    slideshowTimer = setInterval(changeSlides, 7000);
+                }
+            }
+        });
+
+        // Stop slideshow when user leaves page
+        $(window).on('blur', function() {
+            clearInterval(slideshowTimer);
+            paused = true;
+        });
+
+        // Restart slideshow when user comes back
+        $(window).on('focus', function() {
+            paused = false;
+            if (running && !paused) {
+                clearInterval(slideshowTimer);
+                slideshowTimer = setInterval(changeSlides, 7000);
+            }
+        });
+
         // Method to show the top slide
         var showTopSlide = function() {
             if (running) {
@@ -87,19 +182,6 @@ $(document).ready(function() {
 
         // Method to show the middle slide
         var showMiddleSlide = function() {
-            // Stop slideshow when user leaves page
-            $(window).on('blur', function() {
-                clearInterval(slideshowTimer);
-            });
-
-            // Restart slideshow when user comes back
-            $(window).on('focus', function() {
-                if (running) {
-                    clearInterval(slideshowTimer);
-                    slideshowTimer = setInterval(changeSlides, 7000);
-                }
-            });
-
             if (running) {
                 middleSlide.hide();
                 middleSlide.show("slide", {direction: "right"}, 1000);
@@ -149,6 +231,7 @@ $(document).ready(function() {
             if (counter === 1) {
                 showTopSlide();
                 counter++;
+                initialLoop = false;
             } else if (counter === 2) {
                 showMiddleSlide();
                 counter++;
@@ -191,22 +274,31 @@ $(document).ready(function() {
             running = false;
             if ($(this).is('#left')) {
                 clearInterval(slideshowTimer);
-                showTopSlide();
-                setSelectedControlTo('#left');
-                setNoLongerSelectedTo('#center', '#right');
-                counter = 1;
+                if (counter != 1) {
+                    initialLoop = false;
+                    showTopSlide();
+                    setSelectedControlTo('#left');
+                    setNoLongerSelectedTo('#center', '#right');
+                    counter = 1;
+                }
             } else if ($(this).is('#center')) {
                 clearInterval(slideshowTimer);
-                showMiddleSlide();
-                setSelectedControlTo('#center');
-                setNoLongerSelectedTo('#left', '#right');
-                counter = 2;
+                if (counter != 2 || initialLoop) {
+                    initialLoop = false;
+                    showMiddleSlide();
+                    setSelectedControlTo('#center');
+                    setNoLongerSelectedTo('#left', '#right');
+                    counter = 2;
+                }
             } else {
                 clearInterval(slideshowTimer);
-                showBottomSlide();
-                setSelectedControlTo('#right');
-                setNoLongerSelectedTo('#left', '#center');
-                counter = 3;
+                if (counter != 3) {
+                    initialLoop = false;
+                    showBottomSlide();
+                    setSelectedControlTo('#right');
+                    setNoLongerSelectedTo('#left', '#center');
+                    counter = 3;
+                }
             }
         });
 
@@ -352,7 +444,7 @@ $(document).ready(function() {
         $(this).toggleClass('rotated');
         // Dynamically change user instructions
         if (currentContent.toLowerCase() === "want to see more? click below!") {
-            $('#direct-user-down').html("Click again to hide extra content.");
+            $('#direct-user-down').html("Click again to hide.");
             currentContent = "Click again to hide content.";
             displayProjects(bottomImages, false);
         } else {
@@ -370,6 +462,12 @@ $(document).ready(function() {
     });
 
     // END OF MY RECENT PROJECTS
+
+    // CONTACT JAMES
+
+    
+
+    // END OF CONTACT JAMES
 
     // FOOTER
 
