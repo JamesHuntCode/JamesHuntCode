@@ -87,6 +87,19 @@ $(document).ready(function() {
 
         // Method to show the middle slide
         var showMiddleSlide = function() {
+            // Stop slideshow when user leaves page
+            $(window).on('blur', function() {
+                clearInterval(slideshowTimer);
+            });
+
+            // Restart slideshow when user comes back
+            $(window).on('focus', function() {
+                if (running) {
+                    clearInterval(slideshowTimer);
+                    slideshowTimer = setInterval(changeSlides, 7000);
+                }
+            });
+
             if (running) {
                 middleSlide.hide();
                 middleSlide.show("slide", {direction: "right"}, 1000);
@@ -110,6 +123,7 @@ $(document).ready(function() {
         // Method to show the bottom slide
         var showBottomSlide = function() {
             if (running) {
+                bottomSlide.hide();
                 bottomSlide.show("slide", {direction: "right"}, 1000);
                 middleSlide.hide("slide", {direction: "left"}, 1000);
             } else {
