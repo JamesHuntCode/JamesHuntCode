@@ -28,14 +28,11 @@ $(document).ready(function() {
 
     // Method to check if a certain element is visible by the user
     var checkIfOnScreen = function(elem) {
-        var element = elem;
-        var viewport = $(window);
+        var currentPos = elem.offset();
+        var currentTop = currentPos.top - $(window).scrollTop();
+        var screenHeight = $(window).height();
 
-        var docViewBottom = viewport.scrollTop() + viewport.height();
-
-        var elemTop = element.offset().top;
-
-        return (elemTop >= docViewBottom);
+        return (currentTop > screenHeight) ? false : true;
     }
 
     var slideshowNotVisible = function() {
@@ -465,7 +462,7 @@ $(document).ready(function() {
 
     // CONTACT JAMES
 
-    
+
 
     // END OF CONTACT JAMES
 
