@@ -50,7 +50,7 @@ $(document).ready(function() {
     // NAVIGATION BAR
 
     $('#nav-bar a').hover(function() {
-        $(this).animate({color: '#808080'}, 200);
+        $(this).animate({color: '#008080'}, 200);
     }, function() {
         $(this).animate({color: '#ffffff'}, 200);
     });
@@ -460,19 +460,20 @@ $(document).ready(function() {
 
     // END OF MY RECENT PROJECTS
 
-    // CONTACT JAMES
-
-
-
-    // END OF CONTACT JAMES
-
     // FOOTER
 
-    $('#footer a').hover(function() {
+    $('.footer-link a, .redirect-user').hover(function() {
         $(this).animate({color: '#808080'}, 200);
     }, function() {
         $(this).animate({color: '#ffffff'}, 200);
     });
+
+    /* in next update:
+
+        - redo scrolling method to work for the footer
+        - apply said method to footer, allowing user to navigate page from footer
+
+    */
 
     // END OF FOOTER
 });

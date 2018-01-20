@@ -178,7 +178,7 @@ body {
     padding: 2px;
 
     border-radius: 8px;
-    border: 2px solid white;
+    border: 1px solid white;
 
     position: relative;
     top: 560px;
@@ -546,73 +546,75 @@ body {
 
 /* END OF MY RECENT PROJECTS */
 
-/* EMAIL / CONTACT JAMES */
-
-#contact-james {
-    height: 500px;
-    background-color: #E0E0E0;
-}
-
-/* END OF EMAIL / CONTACT JAMES */
-
 /* FOOTER */
 
 #footer {
     background-color: #333;
 }
 
-.footer-header {
+.footer-heading {
     font-family: "Montserrat", arial;
-    font-size: 30px;
+    font-size: 27px;
+
     text-align: center;
-    color: white;
+    color: teal;
 
     margin: 10px;
     padding: 5px;
 }
 
-#footer p {
+.footer-link {
     text-align: center;
+}
+
+.footer-link a {
+    font-family: "Montserrat", arial;
+    font-size: 16px;
+    color: white;
+
+    margin: 5px;
+    padding: 5px;
+}
+
+.footer-link a:hover {
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+
+#work-with-james {
+    text-align: center;
+
     font-family: "Montserrat", arial;
     font-size: 14px;
     color: white;
 
-    margin: 15px 15px 0px 15px;
-    padding: 15px 15px 0px 15px;
+    margin: 5px;
+    padding: 5px;
 }
 
-#footer a {
+.redirect-user {
+    text-align: center;
+
     font-family: "Montserrat", arial;
-    font-size: 14px;
+    font-size: 16px;
     color: white;
 
-    text-decoration: none;
+    margin: 5px;
+    padding: 5px;
+
     cursor: pointer;
 }
 
-#src-code {
+.under-footer-text {
     text-align: center;
 
     font-family: "Montserrat", arial;
     font-size: 12px;
-    color: white;
+    color: teal;
 
-    margin: 0px;
-    padding: 0px;
-}
-
-#src-code-link {
-    text-align: center;
-
-    font-family: "Montserrat", arial;
-    font-size: 12px;
-    color: white;
-
-    text-decoration: none;
-    cursor: pointer;
-
-    margin: 0px;
-    padding: 0px;
+    margin: 10px 5px 5px 5px;
+    padding: 10px 5px 5px 5px;
 }
 
 /* END OF FOOTER */
