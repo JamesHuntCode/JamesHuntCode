@@ -228,6 +228,8 @@ body {
     height: 300px;
     width: 300px;
 
+    box-shadow: 0px 0px 10px #333;
+
     margin: 10px auto;
     padding: 0px;
 
@@ -246,15 +248,19 @@ body {
     font-size: 16px;
 
     margin: 10px;
-    padding: 10px;
 }
 
 /* END OF ABOUT JAMES */
 /* JAMES' SKILLSET */
 
 #professional-skillset {
-    background-color: #E0E0E0;
+    background-color: #333;
 }
+
+#skillset-main-head, #skillset-sub-head {
+    color: white;
+}
+
 
 .skillset-logo {
     height: 100px;
@@ -269,7 +275,10 @@ body {
     font-family: "Montserrat", arial;
     font-size: 25px;
     font-weight: bold;
+
     text-align: center;
+
+    color: teal;
 
     margin: 10px;
     padding: 5px;
@@ -280,6 +289,8 @@ body {
 
     font-family: "Montserrat", arial;
     font-size: 16px;
+
+    color: white;
 
     margin: 10px 10px 0px 10px;
     padding: 10px 10px 0px 10px;
@@ -292,10 +303,9 @@ body {
 .github-repo-link {
     font-family: "Montserrat", arial;
     font-size: 16px;
-    font-weight: bold;
 
     text-decoration: none;
-    color: #333;
+    color: teal;
     cursor: pointer;
 
     margin: 0px;
@@ -304,7 +314,7 @@ body {
 
 .github-repo-link:hover {
     text-decoration: none;
-    color: #333;
+    color: teal;
     cursor: pointer;
 }
 

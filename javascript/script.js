@@ -1,6 +1,7 @@
 $(document).ready(function() {
     // Method to run page scale check and reveal sections if already visible by user
     var runInitialCheck = function() {
+
         // Check skill set section
         if (checkIfOnScreen($('#professional-skillset'))) {
             revealSkills();
@@ -67,7 +68,7 @@ $(document).ready(function() {
                 sendUserTo("james-projects");
             break;
             case "CONTACT JAMES":
-                sendUserTo("email-james");
+                sendUserTo("footer");
             break;
         }
     });
@@ -77,6 +78,9 @@ $(document).ready(function() {
         var selectedElem;
 
         switch (location) {
+            case "top":
+                selectedElem = $("#nav-bar");
+            break;
             case "about-james":
                 selectedElem = $('#about-james');
             break;
@@ -86,8 +90,8 @@ $(document).ready(function() {
             case "james-projects":
                 selectedElem = $('#james-recent-projects');
             break;
-            case "email-james":
-                selectedElem = $('#contact-james');
+            case "footer":
+                selectedElem = $('#footer');
             break;
         }
 
@@ -336,12 +340,6 @@ $(document).ready(function() {
 
     // ABOUT && SKILLSET
 
-    $('.github-repo-link').hover(function () {
-        $(this).animate({color: '#808080'}, 200);
-    }, function() {
-        $(this).animate({color: '#333'}, 200);
-    });
-
     // Prepare document for reveal of skills on scroll
     var topSkillLogos = [$('#c-sharp-logo'), $('#javascript-logo'), $('#sql-logo')];
     var topSkillHeaders = [$('#c-sharp-header'), $('#javascript-header'), $('#sql-header')];
@@ -468,12 +466,19 @@ $(document).ready(function() {
         $(this).animate({color: '#ffffff'}, 200);
     });
 
-    /* in next update:
-
-        - redo scrolling method to work for the footer
-        - apply said method to footer, allowing user to navigate page from footer
-
-    */
+    $('.redirect-user').on('click', function() {
+        switch ($(this).text().toUpperCase()) {
+            case "RETURN TO TOP":
+                sendUserTo("top");
+            break;
+            case "ABOUT JAMES":
+                sendUserTo("about-james");
+            break;
+            case "JAMES' RECENT PROJECTS":
+                sendUserTo("james-projects");
+            break;
+        }
+    })
 
     // END OF FOOTER
 });
