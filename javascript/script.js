@@ -293,7 +293,7 @@ $(document).ready(function() {
                 }
             } else {
                 clearInterval(slideshowTimer);
-                if (counter != 3) {
+                if (counter != 3 || initialLoop) {
                     initialLoop = false;
                     showBottomSlide();
                     setSelectedControlTo('#right');
