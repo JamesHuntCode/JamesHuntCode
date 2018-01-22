@@ -127,6 +127,7 @@ $(document).ready(function() {
     var running;
     var paused;
     var initialLoop;
+    var transitioning; // Come back to this <--
 
     // Main slideshow method
     var slideshow = function(topSlide, middleSlide, bottomSlide) {
@@ -137,7 +138,6 @@ $(document).ready(function() {
         // Pause slideshow if it has left user's viewport
         $(document).scroll(function() {
             if (slideshowNotVisible()) {
-                // Stop slideshow in here
                 clearInterval(slideshowTimer);
                 paused = true;
             } else {
@@ -167,10 +167,12 @@ $(document).ready(function() {
         // Method to show the top slide
         var showTopSlide = function() {
             if (running) {
+                // Automatic
                 topSlide.hide();
                 topSlide.show("slide", {direction: "right"}, 1000);
                 bottomSlide.hide("slide", {direction: "left"}, 1000);
             } else {
+                // User requested
                 topSlide.show("slide", {direction: "right"}, 1000);
                 middleSlide.hide("slide", {direction: "left"}, 1000);
                 bottomSlide.hide("slide", {direction: "left"}, 1000);
@@ -184,10 +186,12 @@ $(document).ready(function() {
         // Method to show the middle slide
         var showMiddleSlide = function() {
             if (running) {
+                // Automatic
                 middleSlide.hide();
                 middleSlide.show("slide", {direction: "right"}, 1000);
                 topSlide.hide("slide", {direction: "left"}, 1000);
             } else {
+                // User requested
                 middleSlide.hide();
                 middleSlide.show("slide", {direction: "right"}, 1000);
                 topSlide.hide("slide", {direction: "left"}, 1000);
@@ -206,10 +210,12 @@ $(document).ready(function() {
         // Method to show the bottom slide
         var showBottomSlide = function() {
             if (running) {
+                // Automatic
                 bottomSlide.hide();
                 bottomSlide.show("slide", {direction: "right"}, 1000);
                 middleSlide.hide("slide", {direction: "left"}, 1000);
             } else {
+                // User requested
                 bottomSlide.hide();
                 bottomSlide.show("slide", {direction: "right"}, 1000);
                 topSlide.hide("slide", {direction: "left"}, 1000);
