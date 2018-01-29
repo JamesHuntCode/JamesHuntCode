@@ -1,7 +1,6 @@
 $(document).ready(function() {
     // Method to run page scale check and reveal sections if already visible by user
     var runInitialCheck = function() {
-
         // Check skill set section
         if (checkIfOnScreen($('#professional-skillset'))) {
             revealSkills();
@@ -19,19 +18,12 @@ $(document).ready(function() {
         // Check if skills are visible by user
         if (checkIfOnScreen($('#professional-skillset'))) {
             revealSkills();
-        } else {
-            // If skills are not on screen, fade them out to fade back when user re-scrolls
-            //hideSkills();
         }
 
         // Check if projects are visible by user
         if (checkIfOnScreen($('#top-3-projects'))) {
             displayProjects(topImages, true);
-        } else {
-            // If projects are not on screen, shrink them to grow when user re-scrolls
-            //hideProjects(topImages, true);
         }
-
     });
 
     // Method to check if a certain element is visible by the user
@@ -41,8 +33,6 @@ $(document).ready(function() {
         var screenHeight = $(window).height();
 
         return (currentTop > screenHeight) ? false : true;
-
-        // Make this method check bottom position also, not only top <----------- COME BACK TO THIS
     }
 
     var slideshowNotVisible = function() {
