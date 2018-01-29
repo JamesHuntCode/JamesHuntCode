@@ -66,8 +66,8 @@ $(document).ready(function() {
             case "JAMES' PROJECTS":
                 sendUserTo("james-projects");
             break;
-            case "CONTACT JAMES":
-                sendUserTo("footer");
+            case "SOCIAL MEDIA":
+                sendUserTo("social-media");
             break;
         }
     });
@@ -89,8 +89,8 @@ $(document).ready(function() {
             case "james-projects":
                 selectedElem = $('#james-recent-projects');
             break;
-            case "footer":
-                selectedElem = $('#footer');
+            case "social-media":
+                selectedElem = $('#james-social-media');
             break;
         }
 
@@ -485,6 +485,9 @@ $(document).ready(function() {
             break;
             case "JAMES' RECENT PROJECTS":
                 sendUserTo("james-projects");
+            break;
+            case "JAMES' SOCIAL MEDIA":
+            sendUserTo("social-media");
             break;
         }
     })

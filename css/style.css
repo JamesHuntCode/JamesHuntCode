@@ -557,6 +557,15 @@ body {
 
 /* END OF MY RECENT PROJECTS */
 
+/* JAMES' SOCIAL MEDIA */
+
+#james-social-media {
+    /* maybe play around with the color scheme to find something that works */
+    background-color: #E0E0E0;
+}
+
+/* END OF JAMES' SOCIAL MEDIA */
+
 /* FOOTER */
 
 #footer {
@@ -597,7 +606,7 @@ body {
     text-align: center;
 
     font-family: "Montserrat", arial;
-    font-size: 14px;
+    font-size: 15px;
     color: white;
 
     margin: 5px;
