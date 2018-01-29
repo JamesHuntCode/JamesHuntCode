@@ -19,12 +19,19 @@ $(document).ready(function() {
         // Check if skills are visible by user
         if (checkIfOnScreen($('#professional-skillset'))) {
             revealSkills();
+        } else {
+            // If skills are not on screen, fade them out to fade back when user re-scrolls
+            //hideSkills();
         }
 
         // Check if projects are visible by user
         if (checkIfOnScreen($('#top-3-projects'))) {
             displayProjects(topImages, true);
+        } else {
+            // If projects are not on screen, shrink them to grow when user re-scrolls
+            //hideProjects(topImages, true);
         }
+
     });
 
     // Method to check if a certain element is visible by the user
@@ -34,6 +41,8 @@ $(document).ready(function() {
         var screenHeight = $(window).height();
 
         return (currentTop > screenHeight) ? false : true;
+
+        // Make this method check bottom position also, not only top <----------- COME BACK TO THIS
     }
 
     var slideshowNotVisible = function() {
@@ -199,8 +208,8 @@ $(document).ready(function() {
             }
 
             // Introduce content
-            $('#coding-slide-content h1').delay(1000).slideDown(1000);
-            $('#coding-slide-content h3').delay(2000).slideDown(1000);
+            $('#coding-slide-content h1').delay(750).slideDown(750);
+            $('#coding-slide-content h3').delay(1500).slideDown(750);
 
             // Change slide controls
             setSelectedControlTo('#center');
@@ -223,8 +232,8 @@ $(document).ready(function() {
             }
 
             // Introduce content
-            $('#minigame-slide-content h1').delay(1000).slideDown(1000);
-            $('#minigame-slide-content h3').delay(2000).slideDown(1000);
+            $('#minigame-slide-content h1').delay(750).slideDown(750);
+            $('#minigame-slide-content h3').delay(1500).slideDown(750);
 
             // Change slide controls
             setSelectedControlTo('#right');
@@ -274,7 +283,7 @@ $(document).ready(function() {
                 slideControls[i].delay(offsetEase).animate({opacity: '0'}, 400);
                 offsetEase += 100;
             }
-        })
+        });
 
         // Handle user request to change slide
         $('.slideshow-control-button').on('click', function() {
@@ -382,6 +391,10 @@ $(document).ready(function() {
         for (let i = 0; i < allSkillBasedContent.length; i++) {
             fadeReveal(allSkillBasedContent[i]);
         }
+    }
+
+    var hideSkills = function() {
+
     }
 
     // END OF ABOUT && SKILLSET
