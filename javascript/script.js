@@ -467,6 +467,16 @@ $(document).ready(function() {
 
     // END OF MY RECENT PROJECTS
 
+    // JAMES SOCIAL MEDIA
+
+    /*$('#james-social-media a').hover(function() {
+        $(this).animate({color: '#E0E0E0'}, 200);
+    }, function() {
+        $(this).animate({color: '#ffffff'}, 200);
+    });*/
+
+    // END OF JAMES SOCIAL MEDIA
+
     // FOOTER
 
     $('.footer-link a, .redirect-user').hover(function() {
@@ -490,7 +500,7 @@ $(document).ready(function() {
             sendUserTo("social-media");
             break;
         }
-    })
+    });
 
     // END OF FOOTER
 });

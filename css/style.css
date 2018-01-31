@@ -563,7 +563,6 @@ body {
     /* maybe play around with the color scheme to find something that works */
     /*background-color: #E0E0E0;*/
     background-color: teal;
-    height: 500px;
 }
 
 #social-media-heading, #social-media-sub-heading {
@@ -582,17 +581,37 @@ body {
     padding: 5px;
 }
 
-.social-media-content {
-    height: 300px;
-    width: 90%;
+.social-media-content-wrapper {
+    min-height: 400px;
+}
 
-    margin: 10px auto;
+.social-media-content {
+    height: 400px;
+    width: 100%;
+
+    margin: 15px auto;
 
     border-radius: 25px;
 
     background-color: white;
     box-shadow: 0px 0px 5px white;
 }
+
+/*.social-link-wrapper {
+    text-align: center;
+}
+
+#james-social-media a {
+    font-family: "Montserrat", arial;
+    font-size: 16px;
+
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+
+    margin: 10px;
+    padding: 0px;
+}*/
 
 /* END OF JAMES' SOCIAL MEDIA */
 
