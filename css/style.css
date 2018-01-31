@@ -586,7 +586,6 @@ body {
 }
 
 .social-media-content {
-    height: 400px;
     width: 100%;
 
     margin: 15px auto;
@@ -595,6 +594,49 @@ body {
 
     background-color: white;
     box-shadow: 0px 0px 5px white;
+}
+
+#twitter-content {
+    height: 400px;
+}
+
+.contact-info-image {
+    height: 80px;
+    width: 80px;
+
+    margin: 10px auto;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#email-img {
+    background-image: url("images/website-logos/email.png");
+}
+
+#linked-in-img {
+    background-image: url("images/website-logos/linkedin.png");
+}
+
+#twitter-img {
+    background-image: url("images/website-logos/twitter.png");
+}
+
+#github-img {
+    background-image: url("images/website-logos/github.png");
+}
+
+.contact-method-header {
+    font-family: "Montserrat", arial;
+    font-size: 20px;
+
+    color: teal;
+
+    text-align: center;
+
+    margin: 10px;
+    padding: 5px;
 }
 
 /*.social-link-wrapper {
