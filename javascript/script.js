@@ -469,11 +469,11 @@ $(document).ready(function() {
 
     // JAMES SOCIAL MEDIA
 
-    /*$('#james-social-media a').hover(function() {
-        $(this).animate({color: '#E0E0E0'}, 200);
+    $('.contact-field a').hover(function() {
+        $(this).animate({color: '#808080'}, 200);
     }, function() {
-        $(this).animate({color: '#ffffff'}, 200);
-    });*/
+        $(this).animate({color: '#333'}, 200);
+    });
 
     // END OF JAMES SOCIAL MEDIA
 
@@ -493,11 +493,11 @@ $(document).ready(function() {
             case "ABOUT JAMES":
                 sendUserTo("about-james");
             break;
-            case "JAMES' RECENT PROJECTS":
+            case "JAMES' PROJECTS":
                 sendUserTo("james-projects");
             break;
             case "JAMES' SOCIAL MEDIA":
-            sendUserTo("social-media");
+                sendUserTo("social-media");
             break;
         }
     });
