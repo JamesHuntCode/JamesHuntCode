@@ -10,6 +10,11 @@ $(document).ready(function() {
         if (checkIfOnScreen($('#top-3-projects'))) {
             displayProjects(topImages, true);
         }
+
+        // Check contact / social media section
+        if (checkIfOnScreen($('#james-social-media'))) {
+            revealContactDetails();
+        }
     }
     var runningChecks = setTimeout(runInitialCheck, 10);
 
@@ -23,6 +28,11 @@ $(document).ready(function() {
         // Check if projects are visible by user
         if (checkIfOnScreen($('#top-3-projects'))) {
             displayProjects(topImages, true);
+        }
+
+        // Check contact / social media section
+        if (checkIfOnScreen($('#james-social-media'))) {
+            revealContactDetails();
         }
     });
 
@@ -468,6 +478,32 @@ $(document).ready(function() {
     // END OF MY RECENT PROJECTS
 
     // JAMES SOCIAL MEDIA
+
+    // Hide content in preparation for dynamic reveal
+    var contactImages = [$('#email-img'), $('#linked-in-img'), $('#twitter-img'), $('#github-img')];
+    var contactHeaders = [$('#email-header'), $('#linked-in-header'), $('#twitter-header'), $('#github-header')];
+    var contactAddresses = [$('#email-summary'), $('#linked-in-summary'), $('#twitter-summary'), $('#github-summary')];
+
+    var allContent = [contactImages, contactHeaders, contactAddresses];
+
+    for (let i = 0; i < allContent.length; i++) {
+        for (let j = 0; j < allContent[i].length; j++) {
+            allContent[i][j].hide();
+        }
+    }
+
+
+    // Method to dynamically reveal contact information and twitter feed
+    var revealContactDetails = function() {
+        var offset = 0;
+
+        for (let i = 0; i < allContent.length; i++) {
+            for (let j = 0; j < allContent[i].length; j++) {
+                allContent[i][j].delay(offset).fadeIn(750);
+                offset += 100;
+            }
+        }
+    }
 
     $('.contact-field a').hover(function() {
         $(this).animate({color: '#808080'}, 200);

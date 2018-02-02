@@ -560,8 +560,6 @@ body {
 /* JAMES' SOCIAL MEDIA */
 
 #james-social-media {
-    /* maybe play around with the color scheme to find something that works */
-    /*background-color: #E0E0E0;*/
     background-color: teal;
 }
 
@@ -598,6 +596,12 @@ body {
 
 #twitter-content {
     height: 400px;
+}
+
+.contact-content-wrapper {
+    min-height: 80px;
+    min-width: 80px;
+    margin: 10px auto;
 }
 
 .contact-info-image {
@@ -671,22 +675,6 @@ body {
     text-decoration: none;
     color: #333;
 }
-
-/*.social-link-wrapper {
-    text-align: center;
-}
-
-#james-social-media a {
-    font-family: "Montserrat", arial;
-    font-size: 16px;
-
-    text-decoration: none;
-    color: white;
-    cursor: pointer;
-
-    margin: 10px;
-    padding: 0px;
-}*/
 
 /* END OF JAMES' SOCIAL MEDIA */
 
