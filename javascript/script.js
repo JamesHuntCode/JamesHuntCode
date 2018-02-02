@@ -2,7 +2,7 @@ $(document).ready(function() {
     // Method to run page scale check and reveal sections if already visible by user
     var runInitialCheck = function() {
         // Check skill set section
-        if (checkIfOnScreen($('#professional-skillset'))) {
+        if (checkIfOnScreen($('#top-row-skills'))) {
             revealSkills();
         }
 
@@ -12,7 +12,7 @@ $(document).ready(function() {
         }
 
         // Check contact / social media section
-        if (checkIfOnScreen($('#james-social-media'))) {
+        if (checkIfOnScreen($('#contact-information'))) {
             revealContactDetails();
         }
     }
@@ -21,7 +21,7 @@ $(document).ready(function() {
     // Check what content is visible on user scroll
     $(document).scroll(function() {
         // Check if skills are visible by user
-        if (checkIfOnScreen($('#professional-skillset'))) {
+        if (checkIfOnScreen($('#top-row-skills'))) {
             revealSkills();
         }
 
@@ -31,7 +31,7 @@ $(document).ready(function() {
         }
 
         // Check contact / social media section
-        if (checkIfOnScreen($('#james-social-media'))) {
+        if (checkIfOnScreen($('#contact-information'))) {
             revealContactDetails();
         }
     });
