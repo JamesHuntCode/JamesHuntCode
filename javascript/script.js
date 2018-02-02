@@ -538,5 +538,13 @@ $(document).ready(function() {
         }
     });
 
+    // Automatically update date of copyright notice in footer
+    var copyright = $('#copyright-notice');
+
+    var date = new Date();
+    var thisYear = date.getFullYear();
+
+    copyright.html('© ' + thisYear + ' James Hunt Some Rights Reserved');
+
     // END OF FOOTER
 });
