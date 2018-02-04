@@ -208,7 +208,7 @@ body {
 /* ABOUT JAMES */
 
 .main-heading {
-    font-family: "Montserrat", arial;
+    font-family: "Quicksand", arial;
     font-size: 50px;
     text-align: center;
 
@@ -217,7 +217,7 @@ body {
 }
 
 .sub-heading {
-    font-family: "Montserrat", arial;
+    font-family: "Quicksand", arial;
     font-size: 25px;
     text-align: center;
 
@@ -255,7 +255,8 @@ body {
 /* JAMES' SKILLSET */
 
 #professional-skillset {
-    background-color: #333;
+    border-top: 5px solid #333;
+    border-bottom: 5px solid #333;
 }
 
 #skillset-main-head, #skillset-sub-head {
@@ -291,7 +292,7 @@ body {
     font-family: "Montserrat", arial;
     font-size: 16px;
 
-    color: white;
+    color: #333;
 
     margin: 10px 10px 0px 10px;
     padding: 10px 10px 0px 10px;
@@ -584,7 +585,7 @@ body {
 }
 
 .social-media-content {
-    min-height: 400px; /* REMOVE THIS */
+    height: 400px;
     width: 100%;
 
     margin: 15px auto;
