@@ -477,7 +477,12 @@ $(document).ready(function() {
 
     // END OF MY RECENT PROJECTS
 
-    // JAMES SOCIAL MEDIA
+    // JAMES' SOCIAL MEDIA
+
+
+    // END OF JAMES' SOCIAL MEDIA
+
+    // CONTACT JAMES
 
     // Hide content in preparation for dynamic reveal
     var contactImages = [$('#email-img'), $('#linked-in-img'), $('#twitter-img'), $('#github-img')];
@@ -488,30 +493,30 @@ $(document).ready(function() {
 
     for (let i = 0; i < allContent.length; i++) {
         for (let j = 0; j < allContent[i].length; j++) {
-            allContent[i][j].hide();
+            allContent[i][j].css('opacity', '0');
         }
     }
 
 
-    // Method to dynamically reveal contact information and twitter feed
+    // Method to dynamically reveal contact information
     var revealContactDetails = function() {
         var offset = 0;
 
         for (let i = 0; i < allContent.length; i++) {
             for (let j = 0; j < allContent[i].length; j++) {
-                allContent[i][j].delay(offset).fadeIn(750);
+                allContent[i][j].delay(offset).animate({opacity: '1'}, 500);
                 offset += 100;
             }
         }
     }
 
-    $('.contact-field a').hover(function() {
+    $('#contact-james a').hover(function() {
         $(this).animate({color: '#808080'}, 200);
     }, function() {
         $(this).animate({color: '#333'}, 200);
     });
 
-    // END OF JAMES SOCIAL MEDIA
+    // END OF CONTACT JAMES
 
     // FOOTER
 
