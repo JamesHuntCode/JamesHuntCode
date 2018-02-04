@@ -7,7 +7,7 @@ $(document).ready(function() {
         }
 
         // Check recent projects section
-        if (checkIfOnScreen($('#top-3-projects'))) {
+        if (checkIfOnScreen($('#doodle-jump-img'))) {
             displayProjects(topImages, true);
         }
 
@@ -26,7 +26,7 @@ $(document).ready(function() {
         }
 
         // Check if projects are visible by user
-        if (checkIfOnScreen($('#top-3-projects'))) {
+        if (checkIfOnScreen($('#doodle-jump-img'))) {
             displayProjects(topImages, true);
         }
 
