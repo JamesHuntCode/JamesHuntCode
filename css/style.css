@@ -651,9 +651,12 @@ body {
     color: #333;
 
     font-family: "Montserrat", arial;
-    font-size: 16px;
+    font-size: 15px;
 
     text-decoration: none;
+
+    padding: 5px;
+    margin: 5px;
 }
 
 .contact-method-text-wrapper {
@@ -664,11 +667,14 @@ body {
     color: #333;
 
     font-family: "Montserrat", arial;
-    font-size: 16px;
+    font-size: 15px;
 
     text-decoration: none;
 
     cursor: pointer;
+
+    padding: 5px;
+    margin: 5px;
 }
 
 #contact-james a:hover {
