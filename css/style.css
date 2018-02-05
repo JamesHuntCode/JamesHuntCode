@@ -239,7 +239,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 
-    border-radius: 10px;
+    border-radius: 360px;
 }
 
 #info-about-james {
@@ -654,9 +654,6 @@ body {
     font-size: 15px;
 
     text-decoration: none;
-
-    padding: 5px;
-    margin: 5px;
 }
 
 .contact-method-text-wrapper {
@@ -672,9 +669,6 @@ body {
     text-decoration: none;
 
     cursor: pointer;
-
-    padding: 5px;
-    margin: 5px;
 }
 
 #contact-james a:hover {
