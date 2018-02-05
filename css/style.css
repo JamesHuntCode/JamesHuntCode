@@ -255,8 +255,11 @@ body {
 /* JAMES' SKILLSET */
 
 #professional-skillset {
-    border-top: 5px solid #333;
-    border-bottom: 5px solid #333;
+    border-top: 3px solid #333;
+    border-bottom: 3px solid #333;
+
+    margin: 20px 0px;
+    padding: 10px 0px 20px 0px;
 }
 
 #skillset-main-head, #skillset-sub-head {
