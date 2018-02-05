@@ -255,8 +255,7 @@ body {
 /* JAMES' SKILLSET */
 
 #professional-skillset {
-    border-top: 3px solid #333;
-    border-bottom: 3px solid #333;
+    background-color: #E8E8EE;
 
     margin: 20px 0px;
     padding: 10px 0px 20px 0px;
@@ -265,7 +264,6 @@ body {
 #skillset-main-head, #skillset-sub-head {
     color: teal;
 }
-
 
 .skillset-logo {
     height: 100px;
