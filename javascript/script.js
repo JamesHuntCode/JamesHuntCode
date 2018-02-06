@@ -15,6 +15,17 @@ $(document).ready(function() {
         if (checkIfOnScreen($('#contact-information'))) {
             revealContactDetails();
         }
+
+        // RUN CHECKS ON WINDOW SPECIFIC WIDTH-DEPENDANT ELEMENTS:
+        // Slideshow
+        if (true) {
+
+        }
+
+        // skill summaries
+        if (true) {
+
+        }
     }
     var runningChecks = setTimeout(runInitialCheck, 10);
 
@@ -33,6 +44,19 @@ $(document).ready(function() {
         // Check contact / social media section
         if (checkIfOnScreen($('#contact-information'))) {
             revealContactDetails();
+        }
+    });
+
+    // Checking if certain elements are to be displayed at specific resolutions
+    $(window).resize(function() {
+        // Only display slideshow above a specified resolution
+        if (true) {
+
+        }
+
+        // Only display skill summaries above a specified resolution
+        if (true) {
+
         }
     });
 
