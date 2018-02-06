@@ -16,18 +16,47 @@ $(document).ready(function() {
             revealContactDetails();
         }
 
-        // RUN CHECKS ON WINDOW SPECIFIC WIDTH-DEPENDANT ELEMENTS:
-        // Slideshow
-        if (true) {
-
-        }
-
-        // skill summaries
-        if (true) {
-
-        }
+        windowSizeChecks();
     }
     var runningChecks = setTimeout(runInitialCheck, 10);
+
+    // Certain elements are to only be displayed at specific resolutions
+    var windowSizeChecks = function () {
+        // Check navigation bar text size
+        if ($(window).width() <= 908) {
+            $('#nav-bar a').css('fontSize', '15px');
+        } else {
+            $('#nav-bar a').css('fontSize', '20px');
+        }
+
+        // Only display slideshow above a specified resolution
+        if ($(window).width() <= 1121) { // 760px
+            $('.slideshow-content h1, #github-profile-link, #github-frogger-link, #github-defender-link').css('fontSize', '40px');
+            $('.slideshow-content h3, #github-profile-link, #github-frogger-link, #github-defender-link').css('fontSize', '20px');
+        } else {
+            $('.slideshow-content h1, #github-profile-link, #github-frogger-link, #github-defender-link').css('fontSize', '60px');
+            $('.slideshow-content h3, #github-profile-link, #github-frogger-link, #github-defender-link').css('fontSize', '30px');
+        }
+
+        if ($(window).width() <= 760) {
+            $('#summary').hide();
+            $('#spacer').hide();
+        } else {
+            $('#summary').show();
+            $('#spacer').show();
+        }
+
+        // Only display skill summaries above a specified resolution
+        if ($(window).width() <= 470) {
+            $('.skill-text-summary, .github-repo-link-wrapper, .github-repo-link').hide();
+        } else {
+            $('.skill-text-summary, .github-repo-link-wrapper, .github-repo-link').show();
+        }
+    }
+
+    $(window).resize(function() {
+        windowSizeChecks();
+    });
 
     // Check what content is visible on user scroll
     $(document).scroll(function() {
@@ -44,19 +73,6 @@ $(document).ready(function() {
         // Check contact / social media section
         if (checkIfOnScreen($('#contact-information'))) {
             revealContactDetails();
-        }
-    });
-
-    // Checking if certain elements are to be displayed at specific resolutions
-    $(window).resize(function() {
-        // Only display slideshow above a specified resolution
-        if (true) {
-
-        }
-
-        // Only display skill summaries above a specified resolution
-        if (true) {
-
         }
     });
 
