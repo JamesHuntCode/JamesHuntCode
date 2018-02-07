@@ -50,12 +50,10 @@ $(document).ready(function() {
         // Shrink skill summaries alongside
         if ($(window).width() <= 990) {
             $('#info-about-james').css('textAlign', 'center');
-            $('#info-about-james').css('fontSize', '12px');
 
             $('.skill-text-summary').css('fontSize', '12px');
         } else {
             $('#info-about-james').css('textAlign', 'left');
-            $('#info-about-james').css('fontSize', '16px');
 
             $('.skill-text-summary').css('fontSize', '16px');
         }
@@ -337,7 +335,7 @@ $(document).ready(function() {
             running = false;
             if ($(this).is('#left')) {
                 clearInterval(slideshowTimer);
-                if (counter != 1) {
+                if (counter != 1 || initialLoop) {
                     initialLoop = false;
                     showTopSlide();
                     setSelectedControlTo('#left');

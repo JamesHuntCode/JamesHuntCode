@@ -207,6 +207,10 @@ body {
 /* ABOUT JAMES && JAMES' SKILLSET */
 /* ABOUT JAMES */
 
+#about-james {
+    padding: 30px 0px;
+}
+
 .main-heading {
     font-family: "Quicksand", arial;
     font-size: 50px;
@@ -257,8 +261,7 @@ body {
 #professional-skillset {
     background-color: #E8E8EE;
 
-    margin: 20px 0px;
-    padding: 10px 0px 20px 0px;
+    padding: 20px 0px 30px 0px;
 }
 
 #skillset-main-head, #skillset-sub-head {
