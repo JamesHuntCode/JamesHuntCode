@@ -438,10 +438,6 @@ $(document).ready(function() {
         }
     }
 
-    var hideSkills = function() {
-
-    }
-
     // END OF ABOUT && SKILLSET
 
     // MY RECENT PROJECTS
@@ -472,6 +468,13 @@ $(document).ready(function() {
 
         growthOffset = 0;
     }
+
+    // Direct user to GitHub via embedded link when they hover
+    $('.project-gif-top, .project-gif-bottom').hover(function() {
+        $(this).css('boxShadow', '0px 0px 100px #333');
+    }, function() {
+        $(this).css('boxShadow', '0px 0px 10px #333');
+    });
 
     // Method to shrink off project images
     var hideProjects = function(elems, top) {
