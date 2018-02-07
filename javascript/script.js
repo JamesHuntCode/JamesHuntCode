@@ -46,11 +46,18 @@ $(document).ready(function() {
             $('#spacer').show();
         }
 
-        // Only display skill summaries above a specified resolution
-        if ($(window).width() <= 470) {
-            $('.skill-text-summary, .github-repo-link-wrapper, .github-repo-link').hide();
+        // Text align center about section when screen shrinks below a certain threshold
+        // Shrink skill summaries alongside
+        if ($(window).width() <= 990) {
+            $('#info-about-james').css('textAlign', 'center');
+            $('#info-about-james').css('fontSize', '12px');
+
+            $('.skill-text-summary').css('fontSize', '12px');
         } else {
-            $('.skill-text-summary, .github-repo-link-wrapper, .github-repo-link').show();
+            $('#info-about-james').css('textAlign', 'left');
+            $('#info-about-james').css('fontSize', '16px');
+
+            $('.skill-text-summary').css('fontSize', '16px');
         }
     }
 

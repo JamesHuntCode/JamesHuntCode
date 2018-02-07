@@ -19,7 +19,7 @@ body {
 
 #nav-bar a {
     font-family: "Montserrat", arial;
-    font-size: 20px;
+    font-size: 15px;
 
     text-decoration: none;
     color: white;
@@ -567,18 +567,6 @@ body {
 
 #social-media-heading, #social-media-sub-heading {
     color: white;
-}
-
-.social-media-heading {
-    font-family: "Montserrat", arial;
-    font-size: 20px;
-
-    color: white;
-
-    text-align: center;
-
-    margin: 10px;
-    padding: 5px;
 }
 
 .social-media-content-wrapper {
