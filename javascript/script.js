@@ -499,6 +499,12 @@ $(document).ready(function() {
 
     var currentContent = $('#direct-user-down').text();
 
+    $('#drop-down-button').hover(function() {
+        $(this).animate({opacity: '1'}, 250);
+    }, function() {
+        $(this).animate({opacity: '0.7'}, 250);
+    });
+
     $('#drop-down-button').on('click', function() {
         $(this).toggleClass('rotated');
         // Dynamically change user instructions

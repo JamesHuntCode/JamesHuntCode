@@ -208,7 +208,7 @@ body {
 /* ABOUT JAMES */
 
 #about-james {
-    padding: 30px 0px;
+    padding: 30px 0px 60px 0px;
 }
 
 .main-heading {
@@ -229,21 +229,25 @@ body {
     padding: 5px;
 }
 
+#about-james-header {
+    margin: 0px 0px 30px 0px;
+}
+
 #photo-of-james {
-    height: 300px;
-    width: 300px;
+    height: 350px;
+    width: 100%;
 
     box-shadow: 0px 0px 10px #333;
 
     margin: 10px auto;
-    padding: 0px;
+    padding: 50px;
 
-    background-image: url('images/photo-of-james.jpg');
+    background-image: url('images/compsoc.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 
-    border-radius: 360px;
+    border-radius: 10px;
 }
 
 #info-about-james {
@@ -261,7 +265,7 @@ body {
 #professional-skillset {
     background-color: #E8E8EE;
 
-    padding: 20px 0px 30px 0px;
+    padding: 30px 0px 50px 0px;
 }
 
 #skillset-main-head, #skillset-sub-head {
@@ -298,7 +302,7 @@ body {
 
     color: #333;
 
-    margin: 10px 10px 0px 10px;
+    margin: 20px 10px 20px 10px;
     padding: 10px 10px 0px 10px;
 }
 
@@ -375,6 +379,10 @@ body {
 
 /* MY RECENT PROJECTS */
 
+#james-recent-projects {
+    padding: 30px 0px;
+}
+
 .project-sub-header {
     font-family: "Montserrat", arial;
     font-size: 25px;
@@ -419,7 +427,7 @@ body {
     height: 250px;
     width: 250px;
 
-    margin: auto;
+    margin: 30px auto;
 
     border-radius: 20px;
 
@@ -438,7 +446,7 @@ body {
     height: 200px;
     width: 200px;
 
-    margin: 10px auto;
+    margin: 30px auto;
 
     border-radius: 20px;
 
@@ -500,6 +508,8 @@ body {
     -moz-transition: transform 0.8s;
     -webkit-transition: transform 0.8s;
     transition: transform 0.8s;
+
+    opacity: 0.7;
 }
 
 .rotated {
@@ -566,6 +576,8 @@ body {
 
 #james-social-media {
     background-color: teal;
+
+    padding: 30px 0px;
 }
 
 #social-media-heading, #social-media-sub-heading {
@@ -580,15 +592,20 @@ body {
     height: 400px;
     width: 100%;
 
-    margin: 15px auto;
+    margin: 20px auto;
 
     background-color: white;
+
     box-shadow: 0px 0px 5px white;
 }
 
 /* END OF JAMES' SOCIAL MEDIA */
 
 /* CONTACT JAMES */
+
+#contact-james {
+    padding: 30px 0px;
+}
 
 .contact-content-wrapper {
     min-height: 80px;
@@ -599,7 +616,7 @@ body {
     height: 80px;
     width: 80px;
 
-    margin: 15px auto;
+    margin: 30px auto;
 
     background-position: center;
     background-repeat: no-repeat;
@@ -673,6 +690,8 @@ body {
 
 #footer {
     background-color: #333;
+
+    padding: 20px 0px;
 }
 
 .footer-heading {
