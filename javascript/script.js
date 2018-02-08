@@ -39,9 +39,13 @@ $(document).ready(function() {
         }
 
         if ($(window).width() <= 760) {
+            $('#nav-bar').hide();
+
             $('#summary').hide();
             $('#spacer').hide();
         } else {
+            $('#nav-bar').show();
+
             $('#summary').show();
             $('#spacer').show();
         }
