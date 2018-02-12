@@ -241,13 +241,13 @@ body {
 
     margin: 10px auto;
     padding: 50px;
-
-    /*background-image: url('images/compsoc.png');*/
+    
     background-image: url('images/photo-of-james.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 
+    border: 3px solid #333;
     border-radius: 360px;
 }
 
