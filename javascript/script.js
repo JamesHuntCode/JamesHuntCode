@@ -555,7 +555,6 @@ $(document).ready(function() {
         }
     }
 
-
     // Method to dynamically reveal contact information
     var revealContactDetails = function() {
         var offset = 0;
@@ -583,7 +582,7 @@ $(document).ready(function() {
         if ($('#email-direct').text().toLowerCase() === "click below to email james!") {
             $('#email-direct').html("Click again to hide.");
         } else {
-            $('#email-direct').html("Click Below To Email James!");
+            $('#email-direct').html("Click below To email James!");
         }
         $('#contact-form').slideToggle(1000);
     });
