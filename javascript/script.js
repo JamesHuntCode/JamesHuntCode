@@ -125,8 +125,8 @@ $(document).ready(function() {
             case "JAMES' PROJECTS":
                 sendUserTo("james-projects");
             break;
-            case "SOCIAL MEDIA":
-                sendUserTo("social-media");
+            case "CONTACT JAMES":
+                sendUserTo("contact-james");
             break;
         }
     });
@@ -148,8 +148,8 @@ $(document).ready(function() {
             case "james-projects":
                 selectedElem = $('#james-recent-projects');
             break;
-            case "social-media":
-                selectedElem = $('#james-social-media');
+            case "contact-james":
+                selectedElem = $('#contact-james');
             break;
         }
 
@@ -504,23 +504,23 @@ $(document).ready(function() {
     // Code handling the user requesting to see more projects
     $('#bottom-4-projects').hide();
 
-    var currentContent = $('#direct-user-down').text();
+    var currentContent = $('#projects-direct').text();
 
-    $('#drop-down-button').hover(function() {
+    $('.drop-down-button').hover(function() {
         $(this).animate({opacity: '1'}, 250);
     }, function() {
         $(this).animate({opacity: '0.7'}, 250);
     });
 
-    $('#drop-down-button').on('click', function() {
+    $('#projects-drop-button').on('click', function() {
         $(this).toggleClass('rotated');
         // Dynamically change user instructions
         if (currentContent.toLowerCase() === "want to see more? click below!") {
-            $('#direct-user-down').html("Click again to hide.");
+            $('#projects-direct').html("Click again to hide.");
             currentContent = "Click again to hide content.";
             displayProjects(bottomImages, false);
         } else {
-            $('#direct-user-down').html("Want to see more? Click below!");
+            $('#projects-direct').html("Want to see more? Click below!");
             currentContent = "Want to see more? Click below!";
             hideProjects(bottomImages, false);
         }
@@ -574,6 +574,20 @@ $(document).ready(function() {
         $(this).animate({color: '#333'}, 200);
     });
 
+    // Method working with hiding/showing the email James section
+    $('#contact-form').hide();
+
+    $('#email-drop-button').on('click', function() {
+        $(this).toggleClass('rotated');
+        // Dynamically change user instructions
+        if ($('#email-direct').text().toLowerCase() === "click below to email james!") {
+            $('#email-direct').html("Click again to hide.");
+        } else {
+            $('#email-direct').html("Click Below To Email James!");
+        }
+        $('#contact-form').slideToggle(1000);
+    });
+
     // END OF CONTACT JAMES
 
     // FOOTER
@@ -595,8 +609,8 @@ $(document).ready(function() {
             case "JAMES' PROJECTS":
                 sendUserTo("james-projects");
             break;
-            case "JAMES' SOCIAL MEDIA":
-                sendUserTo("social-media");
+            case "CONTACT JAMES":
+                sendUserTo("contact-james");
             break;
         }
     });

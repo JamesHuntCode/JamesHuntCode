@@ -36,7 +36,7 @@
                 </div>
                 <!-- SOCIAL MEDIA -->
                 <div class="col-sm-3">
-                    <p><a id="nav-media" href="#james-social-media">Social Media</a></p>
+                    <p><a id="nav-media" href="#james-social-media">Contact James</a></p>
                 </div>
             </div>
         </div>
@@ -253,8 +253,8 @@
                     </div>
                 </div>
             </div>
-            <p id="direct-user-down">Want to see more? Click below!</p>
-            <div id="drop-down-button"></div>
+            <p id="projects-direct" class="direct-user-down">Want to see more? Click below!</p>
+            <div id="projects-drop-button" class="drop-down-button"></div>
             <!-- EXTRA VIEW - DROP DOWN DISPLAYING 4 MORE PROJECTS -->
             <div id="bottom-4-projects">
                 <div class="container-fluid">
@@ -378,6 +378,38 @@
                     </p>
                 </div>
             </div>
+            <!-- BUTTON TO TOGGLE EMAIL JAMES SECTION -->
+            <p id="email-direct" class="direct-user-down">Click Below To Email James!</p>
+            <div id="email-drop-button" class="drop-down-button"></div>
+            <!-- EMAIL JAMES FORM -->
+            <div id="contact-form">
+                <form action="https://formspree.io/jameshuntwork1997@yahoo.com" method="POST">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <h3 class="sub-heading">Enter Your Full Name</h3>
+                            <input type="text" name="name" placeholder="Your name" required="required"/>
+                        </div>
+                        <div class="row">
+                            <h3 class="sub-heading">Enter Your Email Address</h3>
+                            <input type="email" name="_replyto" placeholder="Your Email Address" required="required"/>
+                        </div>
+                        <div class="row">
+                            <h3 class="sub-heading">Enter The Subject Of Your Email</h3>
+                            <input name="_subject" placeholder="Email subject" required="required"/>
+                        </div>
+                        <div class="row">
+                            <h3 class="sub-heading">Enter Your Message</h3>
+                            <textarea name="message" required="required"></textarea>
+                        </div>
+                        <div class="row">
+                            <input type="text" name="_gotcha" style="display:none"/>
+                        </div>
+                        <div class="row">
+                            <input id="submit-button" type="submit" value="Send Email">
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
         <!-- END OF CONTACT JAMES -->
         <!-- FOOTER -->
@@ -390,6 +422,7 @@
                     <p class="redirect-user">About James</p>
                     <p class="redirect-user">James' Projects</p>
                     <p class="redirect-user">James' Social Media</p>
+                    <p class="redirect-user">Contact James</p>
                 </div>
                 <div class="col-sm-6">
                     <h3 class="footer-heading">Want To Work With James?</h3>
@@ -406,7 +439,6 @@
                     <p class="footer-link"><a target="_blank" href="https://www.linkedin.com/in/james-hunt-a63762106/">James' LinkedIn Profile</a></p>
                     <p class="footer-link"><a target="_blank" href="https://twitter.com/JamesHuntCode?lang=en">Follow James on Twitter</a></p>
                     <p class="footer-link"><a target="_blank" href="https://github.com/JamesHuntCode">Follow James on GitHub</a></p>
-                    <p class="footer-link"><a target="_blank" href="https://processing.org/">Support Processing & p5.js</a></p>
                 </div>
                 <div class="col-sm-6">
                     <h3 class="footer-heading">Email James Here</h3>
