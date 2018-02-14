@@ -430,8 +430,6 @@ body {
 
     margin: 30px auto;
 
-    border-radius: 20px;
-
     box-shadow: 0px 0px 10px #333;
 
     transform:scale(0);
@@ -448,8 +446,6 @@ body {
     width: 200px;
 
     margin: 30px auto;
-
-    border-radius: 20px;
 
     box-shadow: 0px 0px 10px #333;
 

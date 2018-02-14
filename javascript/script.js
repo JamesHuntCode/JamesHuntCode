@@ -7,7 +7,7 @@ $(document).ready(function() {
         }
 
         // Check recent projects section
-        if (checkIfOnScreen($('#doodle-jump-img'))) {
+        if (checkIfOnScreen($('#job-app-img'))) {
             displayProjects(topImages, true);
         }
 
@@ -75,7 +75,7 @@ $(document).ready(function() {
         }
 
         // Check if projects are visible by user
-        if (checkIfOnScreen($('#doodle-jump-img'))) {
+        if (checkIfOnScreen($('#job-app-img'))) {
             displayProjects(topImages, true);
         }
 
@@ -447,8 +447,8 @@ $(document).ready(function() {
     // MY RECENT PROJECTS
 
     // Code handling reveal of initial 3 projects
-    var topImages = [$('#defender-img'), $('#doodle-jump-img'), $('#galaga-img')];
-    var bottomImages = [$('#job-app-img'), $('#flappy-bird-img'), $('#pong-img'), $('#car-hire-img')];
+    var topImages = [$('#job-app-img'), $('#doodle-jump-img'), $('#car-hire-img')];
+    var bottomImages = [$('#defender-img'), $('#flappy-bird-img'), $('#pong-img'), $('#galaga-img')];
 
     // Method to display project images
     var displayProjects = function(elems, top) {
