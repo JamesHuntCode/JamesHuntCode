@@ -386,11 +386,11 @@
                 <form action="https://formspree.io/jameshuntwork1997@yahoo.com" method="POST">
                     <div class="container-fluid">
                         <div class="row">
-                            <h3 class="sub-heading">Enter Your Full Name</h3>
+                            <h3 class="sub-heading">Enter Your Full Name<span>*</span></h3>
                             <input type="text" name="name" placeholder="Your name" required="required"/>
                         </div>
                         <div class="row">
-                            <h3 class="sub-heading">Enter Your Email Address</h3>
+                            <h3 class="sub-heading">Enter Your Email Address<span>*</span></h3>
                             <input type="email" name="_replyto" placeholder="Your Email Address" required="required"/>
                         </div>
                         <div class="row">
@@ -398,7 +398,7 @@
                             <input name="_subject" placeholder="Email subject" required="required"/>
                         </div>
                         <div class="row">
-                            <h3 class="sub-heading">Enter Your Message</h3>
+                            <h3 class="sub-heading">Enter Your Message<span>*</span></h3>
                             <textarea name="message" required="required"></textarea>
                         </div>
                         <div class="row">
@@ -406,6 +406,9 @@
                         </div>
                         <div class="row">
                             <input id="submit-button" type="submit" value="Send Email">
+                        </div>
+                        <div class="row">
+                            <p><i>Required fields; your name, your email address, your message.</i></p>
                         </div>
                     </div>
                 </form>

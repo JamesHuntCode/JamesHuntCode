@@ -705,16 +705,23 @@ body {
     font-family: "Montserrat", arial;
     font-size: 16px;
 
-    width: 50%;
+    width: 75%;
 }
 
 #contact-form textarea {
     height: 100px;
-    width: 50%;
+    width: 75%;
+
+    overflow-x: hidden;
 }
 
-#submit-button {
+#contact-form span {
+    color: red;
+}
 
+#contact-form p {
+    font-family: "Montserrat", arial;
+    padding: 10px;
 }
 
 /* END OF CONTACT FORM */
