@@ -148,6 +148,9 @@ $(document).ready(function() {
             case "james-projects":
                 selectedElem = $('#james-recent-projects');
             break;
+            case "james-social-media":
+                selectedElem = $('#james-social-media');
+            break;
             case "contact-james":
                 selectedElem = $('#contact-james');
             break;
@@ -607,6 +610,9 @@ $(document).ready(function() {
             break;
             case "JAMES' PROJECTS":
                 sendUserTo("james-projects");
+            break;
+            case "JAMES' SOCIAL MEDIA":
+                sendUserTo("james-social-media");
             break;
             case "CONTACT JAMES":
                 sendUserTo("contact-james");
