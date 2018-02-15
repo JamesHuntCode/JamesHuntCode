@@ -413,10 +413,10 @@ $(document).ready(function() {
     var topSkillSummaries = [$('#c-sharp-summary'), $('#javascript-summary'), $('#sql-summary')];
     var topGitLinks = [$('#c-sharp-link'), $('#js-link'), $('#sql-link')];
 
-    var bottomSkillLogos = [$('#processing-logo'), $('#html-css-logo'), $('#p5-logo')];
-    var bottomSkillHeaders = [$('#processing-header'), $('#html-css-header'), $('#p5-header')];
-    var bottomSkillSummaries = [$('#processing-summary'), $('#html-css-summary'), $('#p5-summary')];
-    var bottomGitLinks = [$('#processing-link'), $('#html-css-link'), $('#p5-link')];
+    var bottomSkillLogos = [$('#processing-logo'), $('#html-css-logo'), $('#android-logo')];
+    var bottomSkillHeaders = [$('#processing-header'), $('#html-css-header'), $('#android-header')];
+    var bottomSkillSummaries = [$('#processing-summary'), $('#html-css-summary'), $('#android-summary')];
+    var bottomGitLinks = [$('#processing-link'), $('#html-css-link'), $('#android-link')];
 
     var allSkillBasedContent = [topSkillLogos, topSkillHeaders, topSkillSummaries, topGitLinks, bottomSkillLogos, bottomSkillHeaders, bottomSkillSummaries, bottomGitLinks];
 

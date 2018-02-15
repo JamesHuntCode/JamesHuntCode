@@ -260,6 +260,10 @@ body {
     margin: 10px;
 }
 
+#more-about-james {
+
+}
+
 /* END OF ABOUT JAMES */
 /* JAMES' SKILLSET */
 
@@ -277,7 +281,7 @@ body {
     height: 100px;
     width: 100px;
 
-    margin: 15px auto;
+    margin: 30px auto;
 
     border-radius: 15px;
 }
@@ -368,8 +372,8 @@ body {
     background-size: cover;
 }
 
-#p5-logo {
-    background-image: url('images/skillset-logos/p5.png');
+#android-logo {
+    background-image: url('images/skillset-logos/android-studio-logo.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -425,8 +429,8 @@ body {
 }
 
 .project-gif-top {
-    height: 250px;
-    width: 250px;
+    height: 300px;
+    width: 300px;
 
     margin: 30px auto;
 
