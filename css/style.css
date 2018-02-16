@@ -284,8 +284,6 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
 
-    border-radius: 360px;
-
     margin: 50px auto;
 }
 
@@ -299,6 +297,7 @@ body {
 
 #plym-logo {
     background-image: url('../css/images/plymouth-city-council.png');
+    border-radius: 360px;
 }
 
 .fact-about-james {

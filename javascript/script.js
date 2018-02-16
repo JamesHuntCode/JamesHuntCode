@@ -564,6 +564,18 @@ $(document).ready(function() {
 
     // JAMES' SOCIAL MEDIA
 
+    var configProfile = {
+        "profile": {"screenName": 'JamesHuntCode'},
+        "id": '958381736337072129',
+        "domId": 'example1',
+        "maxTweets": 1,
+        "enableLinks": true,
+        "showUser": false,
+        "showTime": true,
+        "showImages": false,
+        "lang": 'en'
+    }
+    twitterFetcher.fetch(configProfile);
 
     // END OF JAMES' SOCIAL MEDIA
 

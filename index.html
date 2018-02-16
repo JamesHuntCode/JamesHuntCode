@@ -10,10 +10,6 @@
         <!-- CSS -->
         <link href="css/style.css" type="text/css" rel="stylesheet"/>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
-        <!-- JavaScript -->
-        <script src="javascript/jquery-3.2.1.min.js" type="text/javascript"></script> <!-- jQuery -->
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script> <!-- jQuery UI -->
-        <script src="javascript/script.js" type="text/javascript"></script>
         <!-- links to all fonts (Google) used -->
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"/> <!-- montserrat -->
         <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet"/> <!-- quicksand -->
@@ -121,7 +117,7 @@
                         </div>
                         <h3 class="sub-heading"><b>Software Engineer</b></h3>
                         <p class="fact-about-james">
-                            James has the experience and the know-how to make any software project a success.
+                            James has the experience and the passion to make any software project a success.
                         </p>
                     </div>
                     <div class="col-md-4">
@@ -342,7 +338,7 @@
                     <div class="social-media-content-wrapper">
                         <div class="social-media-content">
                             <!-- FIX THIS -->
-                            <iframe src="https://jameshuntcode.wordpress.com" width="100%" height="400px" target="_top">
+                            <iframe src="https://jameshuntcode.wordpress.com" width="100%" height="100%" target="_top" frameborder="0">
                             <p>Your browser does not support iFrames.</p>
                             </iframe>
                         </div>
@@ -354,10 +350,13 @@
                         <div id="twitter-content" class="social-media-content">
                             <!-- EMBEDDED TWITTER FEED -->
                             <!-- set to retrieve recent tweets from James' personal twitter acccount -->
-                            <a class="twitter-timeline"
+                            <!--<a class="twitter-timeline"
                             href="https://twitter.com/JamesHuntCode?ref_src=twsrc%5Etfw">Tweets by JamesHuntCode</a>
-                            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>-->
                             <!-- END OF EMBEDDED TWITTER FEED -->
+                            <div id="example1">
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -499,4 +498,9 @@
             </div>
         <!-- END OF FOOTER -->
     </body>
+    <!-- JavaScript File Links -->
+    <script src="javascript/tweetFetcher.js" type="text/javascript"></script> <!-- tweetFetcher -->
+    <script src="javascript/jquery-3.2.1.min.js" type="text/javascript"></script> <!-- jQuery -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script> <!-- jQuery UI -->
+    <script src="javascript/script.js" type="text/javascript"></script>
 </html>
