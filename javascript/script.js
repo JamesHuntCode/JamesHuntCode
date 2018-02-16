@@ -1,6 +1,11 @@
 $(document).ready(function() {
     // Method to run page scale check and reveal sections if already visible by user
     var runInitialCheck = function() {
+        // Check short fact section
+        if (checkIfOnScreen($('#divider'))) {
+            revealShortFacts();
+        }
+
         // Check skill set section
         if (checkIfOnScreen($('#top-row-skills'))) {
             revealSkills();
@@ -69,6 +74,11 @@ $(document).ready(function() {
 
     // Check what content is visible on user scroll
     $(document).scroll(function() {
+        // Check if facts about James are visible by user
+        if (checkIfOnScreen($('#divider'))) {
+            revealShortFacts();
+        }
+
         // Check if skills are visible by user
         if (checkIfOnScreen($('#top-row-skills'))) {
             revealSkills();
@@ -406,6 +416,20 @@ $(document).ready(function() {
     // END OF SUMMARY (SLIDESHOW)
 
     // ABOUT && SKILLSET
+
+    var factLogos = [$('#uni-logo'), $('#git-logo'), $('#plym-logo')];
+    for (let i = 0; i < factLogos.length; i++) {
+        factLogos[i].hide();
+    }
+
+    // reveal of facts about James on scroll
+    var revealShortFacts = function() {
+        $('#divider').animate({width: '75%'}, 500);
+
+        for (let i = 0; i < factLogos.length; i++) {
+            factLogos[i].show("drop", {direction: "up"}, 500);
+        }
+    }
 
     // Prepare document for reveal of skills on scroll
     var topSkillLogos = [$('#c-sharp-logo'), $('#javascript-logo'), $('#sql-logo')];
