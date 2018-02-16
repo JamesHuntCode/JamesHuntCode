@@ -612,11 +612,11 @@ $(document).ready(function() {
         $(this).animate({color: '#333'}, 200);
     });
 
-    $('#linked-in-img, #twitter-img, #github-img').hover(function() {
-        $(this).fadeTo(250, 0.7);
+    /*$('#linked-in-img, #twitter-img, #github-img').hover(function() {
+        $(this).css('opacity', '0.7');
     }, function() {
-        $(this).fadeTo(250, 1);
-    });
+        $(this).css('opacity', '1');
+    });*/
 
     // Method working with hiding/showing the email James section
     $('#contact-form').hide();
