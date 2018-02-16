@@ -627,7 +627,7 @@ $(document).ready(function() {
         if ($('#email-direct').text().toLowerCase() === "click below to email james!") {
             $('#email-direct').html("Click again to hide.");
         } else {
-            $('#email-direct').html("Click below To email James!");
+            $('#email-direct').html("Click below to email James!");
         }
         $('#contact-form').slideToggle(1000);
     });
