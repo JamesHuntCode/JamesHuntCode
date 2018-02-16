@@ -502,7 +502,7 @@ $(document).ready(function() {
 
     // Direct user to GitHub via embedded link when they hover
     $('.project-gif-top, .project-gif-bottom').hover(function() {
-        $(this).css('boxShadow', '0px 0px 100px #333');
+        $(this).css('boxShadow', '0px 0px 35px #808080');
     }, function() {
         $(this).css('boxShadow', '0px 0px 10px #333');
     });
@@ -567,8 +567,8 @@ $(document).ready(function() {
     var configProfile = {
         "profile": {"screenName": 'JamesHuntCode'},
         "id": '958381736337072129',
-        "domId": 'example1',
-        "maxTweets": 1,
+        "domId": 'tweets',
+        "maxTweets": 2,
         "enableLinks": true,
         "showUser": false,
         "showTime": true,
@@ -610,6 +610,12 @@ $(document).ready(function() {
         $(this).animate({color: '#808080'}, 200);
     }, function() {
         $(this).animate({color: '#333'}, 200);
+    });
+
+    $('#linked-in-img, #twitter-img, #github-img').hover(function() {
+        $(this).fadeTo(250, 0.7);
+    }, function() {
+        $(this).fadeTo(250, 1);
     });
 
     // Method working with hiding/showing the email James section

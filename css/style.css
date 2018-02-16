@@ -650,6 +650,28 @@ body {
     box-shadow: 0px 0px 5px white;
 }
 
+#tweets {
+
+}
+
+#tweets ul {
+    list-style: none;
+    width: 75%;
+    margin: 50px auto;
+}
+
+#tweets li {
+
+}
+
+#tweets p {
+
+}
+
+#tweets a {
+    padding: 10px;
+}
+
 /* END OF JAMES' SOCIAL MEDIA */
 
 /* CONTACT JAMES */
