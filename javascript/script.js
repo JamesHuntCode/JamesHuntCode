@@ -564,11 +564,17 @@ $(document).ready(function() {
 
     // JAMES' SOCIAL MEDIA
 
+    $('#twitter-prof-link').hover(function() {
+        $(this).animate({color: '#808080'}, 250);
+    }, function() {
+        $(this).animate({color: '#333'}, 250);
+    });
+
     var configProfile = {
         "profile": {"screenName": 'JamesHuntCode'},
         "id": '958381736337072129',
         "domId": 'tweets',
-        "maxTweets": 2,
+        "maxTweets": 1,
         "enableLinks": true,
         "showUser": false,
         "showTime": true,
