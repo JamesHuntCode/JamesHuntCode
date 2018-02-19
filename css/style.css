@@ -323,6 +323,10 @@ body {
     color: teal;
 }
 
+#skillset-sub-head {
+    margin-bottom: 40px;
+}
+
 .skillset-logo {
     height: 100px;
     width: 100px;
@@ -434,6 +438,10 @@ body {
     padding: 30px 0px;
 }
 
+#james-projects-sub-header {
+    margin-bottom: 40px;
+}
+
 .project-sub-header {
     font-family: "Montserrat", arial;
     font-size: 25px;
@@ -540,12 +548,12 @@ body {
     font-size: 14px;
     font-weight: bold;
 
-    margin: 5px;
+    margin: 15px 5px 5px 5px;
 }
 
 .drop-down-button {
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width: 50px;
 
     margin: 10px auto;
 
@@ -650,26 +658,62 @@ body {
     box-shadow: 0px 0px 5px white;
 }
 
-#tweets {
+#twitter-content {
+    overflow: auto;
+}
 
+#twitter-feed-header {
+    padding: 30px 0px 10px;
+    font-weight: bolder;
+}
+
+#twit-link-wrap {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#twitter-prof-link {
+    font-family: "Montserrat", arial;
+    font-size: 14px;
+
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#tweets {
+    border-top: 2px solid #333;
 }
 
 #tweets ul {
     list-style: none;
-    width: 75%;
-    margin: 50px auto;
+    /* negative margin used to align li elements, tried everything else */
+    margin-left: -45px;
 }
 
 #tweets li {
-
+    padding: 10px 0px;
+    list-style-position: outside;
 }
 
 #tweets p {
+    text-align: center;
+    font-family: "Montserrat", arial;
+    font-size: 18px;
 
+    margin: 40px 10px 0px 10px;
 }
 
 #tweets a {
+    text-align: center;
     padding: 10px;
+
+    font-family: "Montserrat", arial;
+    font-size: 16px;
+
+    color: teal;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /* END OF JAMES' SOCIAL MEDIA */
@@ -778,6 +822,18 @@ body {
     font-size: 16px;
 
     width: 75%;
+}
+
+#contact-form input:focus, #contact-form textarea:focus {
+    outline: none !important;
+    border: 1px solid teal;
+    box-shadow: 0px 0px 5px teal;
+}
+
+#submit-button:hover {
+    outline: none !important;
+    border: 1px solid teal;
+    box-shadow: 0px 0px 5px teal;
 }
 
 #contact-form textarea {

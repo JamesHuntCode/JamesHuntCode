@@ -564,11 +564,17 @@ $(document).ready(function() {
 
     // JAMES' SOCIAL MEDIA
 
+    $('#twitter-prof-link').hover(function() {
+        $(this).animate({color: '#808080'}, 250);
+    }, function() {
+        $(this).animate({color: '#333'}, 250);
+    });
+
     var configProfile = {
         "profile": {"screenName": 'JamesHuntCode'},
         "id": '958381736337072129',
         "domId": 'tweets',
-        "maxTweets": 2,
+        "maxTweets": 1,
         "enableLinks": true,
         "showUser": false,
         "showTime": true,
@@ -612,11 +618,11 @@ $(document).ready(function() {
         $(this).animate({color: '#333'}, 200);
     });
 
-    $('#linked-in-img, #twitter-img, #github-img').hover(function() {
-        $(this).fadeTo(250, 0.7);
+    /*$('#linked-in-img, #twitter-img, #github-img').hover(function() {
+        $(this).css('opacity', '0.7');
     }, function() {
-        $(this).fadeTo(250, 1);
-    });
+        $(this).css('opacity', '1');
+    });*/
 
     // Method working with hiding/showing the email James section
     $('#contact-form').hide();
@@ -627,7 +633,7 @@ $(document).ready(function() {
         if ($('#email-direct').text().toLowerCase() === "click below to email james!") {
             $('#email-direct').html("Click again to hide.");
         } else {
-            $('#email-direct').html("Click below To email James!");
+            $('#email-direct').html("Click below to email James!");
         }
         $('#contact-form').slideToggle(1000);
     });
