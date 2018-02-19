@@ -687,8 +687,8 @@ body {
 
 #tweets ul {
     list-style: none;
-    /* negative margin used to align li elements, tried everything else */
-    margin-left: -45px;
+    margin-left: 0px;
+    padding-left: 0px;
 }
 
 #tweets li {
