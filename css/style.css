@@ -11,6 +11,12 @@ body {
 #nav-bar {
     text-align: center;
     background-color: #333;
+
+    width: 100%;
+    position: fixed;
+    top: 0;
+
+    z-index: 9999;
 }
 
 #nav-bar p {
@@ -232,7 +238,7 @@ body {
 
     cursor: pointer;
 
-    z-index: 9999;
+    z-index: 9998;
 }
 
 .active {

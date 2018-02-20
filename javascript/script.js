@@ -47,14 +47,12 @@ $(document).ready(function() {
             if ($(window).width() <= 760) {
                 $('#nav-bar').hide();
                 $('#mobile-nav').show();
-                $('#nav-bar-spacer').show();
 
                 $('#summary').hide();
                 $('#spacer').hide();
             } else {
                 $('#nav-bar').show();
                 $('#mobile-nav').hide();
-                $('#nav-bar-spacer').hide();
 
                 $('#summary').show();
                 $('#spacer').show();
