@@ -595,7 +595,7 @@ $(document).ready(function() {
             "profile": {"screenName": 'JamesHuntCode'},
             "id": '958381736337072129',
             "domId": 'tweets',
-            "maxTweets": 1,
+            "maxTweets": 2,
             "enableLinks": true,
             "showUser": false,
             "showTime": true,
