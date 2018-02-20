@@ -217,7 +217,6 @@ $(document).ready(function() {
         var running;
         var paused;
         var initialLoop;
-        var transitioning; // Come back to this <--
 
         // Main slideshow method
         var slideshow = function(topSlide, middleSlide, bottomSlide) {
@@ -443,8 +442,6 @@ $(document).ready(function() {
 
         // reveal of facts about James on scroll
         var revealShortFacts = function() {
-            $('#divider').animate({width: '75%'}, 500);
-
             for (let i = 0; i < factLogos.length; i++) {
                 factLogos[i].show("drop", {direction: "up"}, 500);
             }
