@@ -50,12 +50,16 @@ $(document).ready(function() {
 
                 $('#summary').hide();
                 $('#spacer').hide();
+
+                $('.github-repo-link').hide();
             } else {
                 $('#nav-bar').show();
                 $('#mobile-nav').hide();
 
                 $('#summary').show();
                 $('#spacer').show();
+
+                $('.github-repo-link').show();
             }
 
             // Text align center about section when screen shrinks below a certain threshold
