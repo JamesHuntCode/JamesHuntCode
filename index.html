@@ -23,26 +23,21 @@
                 visibility: hidden;
             }
 
-            #loading-content {
-                display: block;
-            }
-
             #loading {
                 position: absolute;
-                z-index: 1;
                 left: 50%;
                 top: 50%;
                 z-index: 1;
-                width: 150px;
-                height: 150px;
+                width: 75px;
+                height: 75px;
                 margin: -75px 0 0 -75px;
-                border: 16px solid #E0E0E0;
+                border: 8px solid #333;
                 border-radius: 50%;
-                border-top: 16px solid teal;
-                width: 120px;
-                height: 120px;
-                -webkit-animation: spin 2s linear infinite;
-                animation: spin 2s linear infinite;
+                border-top: 8px solid teal;
+                width: 60px;
+                height: 60px;
+                -webkit-animation: spin 1s linear infinite;
+                animation: spin 1s linear infinite;
             }
 
             @-webkit-keyframes spin {
@@ -57,6 +52,12 @@
         </style>
     </head>
     <body onload="initiateLoad()">
+        <!-- LOADING SCREEN CONTENT -->
+        <div id="loading-content">
+            <div id="loading"></div>
+            <div id="foo" class="vertical-align"></div>
+        </div>
+        <!-- END OF LOADING SCREEN CONTENT -->
         <div id="page-content">
             <!-- NAVIGATION BAR DESKTOP -->
             <div id="nav-bar">
@@ -582,10 +583,6 @@
                 </div>
             </div>
             <!-- END OF FOOTER -->
-        </div>
-        <!-- content displayed when page is loading -->
-        <div id="loading-content">
-            <div id="loading"></div>
         </div>
         <!-- JavaScript / CDN Links -->
         <script>
