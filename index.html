@@ -23,17 +23,22 @@
                 visibility: hidden;
             }
 
+            #loading-content {
+                display: block;
+            }
+
             #loading {
                 position: absolute;
+                z-index: 1;
                 left: 50%;
                 top: 50%;
                 z-index: 1;
                 width: 150px;
                 height: 150px;
                 margin: -75px 0 0 -75px;
-                border: 16px solid #f3f3f3;
+                border: 16px solid #E0E0E0;
                 border-radius: 50%;
-                border-top: 16px solid #3498db;
+                border-top: 16px solid teal;
                 width: 120px;
                 height: 120px;
                 -webkit-animation: spin 2s linear infinite;
@@ -49,25 +54,6 @@
                 0% { transform: rotate(0deg); }
                 100% { transform: rotate(360deg); }
             }
-
-/* Add animation to "page content" */
-.animate-bottom {
-  position: relative;
-  -webkit-animation-name: animatebottom;
-  -webkit-animation-duration: 1s;
-  animation-name: animatebottom;
-  animation-duration: 1s
-}
-
-@-webkit-keyframes animatebottom {
-  from { bottom:-100px; opacity:0 }
-  to { bottom:0px; opacity:1 }
-}
-
-@keyframes animatebottom {
-  from{ bottom:-100px; opacity:0 }
-  to{ bottom:0; opacity:1 }
-}
         </style>
     </head>
     <body onload="initiateLoad()">
@@ -595,18 +581,20 @@
                     </div>
                 </div>
             </div>
+            <!-- END OF FOOTER -->
         </div>
         <!-- content displayed when page is loading -->
-        <div id="loading"></div>
-        <!-- END OF FOOTER -->
+        <div id="loading-content">
+            <div id="loading"></div>
+        </div>
         <!-- JavaScript / CDN Links -->
         <script>
             function initiateLoad() {
-                setTimeout(showPage, 500);
+                setTimeout(showPage, 1000);
             }
 
             function showPage () {
-                document.getElementById("loading").style.display = "none";
+                document.getElementById("loading-content").style.display = "none";
                 document.getElementById("page-content").style.visibility = "visible";
                 document.body.style.overflowY = "auto";
             }
