@@ -1,3 +1,9 @@
+html {
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
 body {
     margin: 0px;
     padding: 0px;
@@ -91,6 +97,8 @@ body {
     top: 0;
 
     z-index: 9999;
+
+    overflow-x: hidden;
 }
 
 #nav-bar p {
