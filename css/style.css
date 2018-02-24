@@ -833,12 +833,13 @@ body {
 
 #blog-container {
     -webkit-overflow-scrolling: touch;
-    overflow-y: hidden;
+    overflow-y: auto;
 }
 
 #blog-frame {
     height: 100%;
     width: 100%;
+    display: block;
 }
 
 #twitter-content {
