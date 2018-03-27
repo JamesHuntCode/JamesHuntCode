@@ -370,29 +370,6 @@ $(document).ready(function() {
 
     // END OF MY RECENT PROJECTS
 
-    // JAMES' SOCIAL MEDIA
-
-    $('#twitter-prof-link').hover(function() {
-        $(this).animate({color: '#808080'}, 250);
-    }, function() {
-        $(this).animate({color: '#333'}, 250);
-    });
-
-    var configProfile = {
-        "profile": {"screenName": 'JamesHuntCode'},
-        "id": '958381736337072129',
-        "domId": 'tweets',
-        "maxTweets": 2,
-        "enableLinks": true,
-        "showUser": false,
-        "showTime": true,
-        "showImages": false,
-        "lang": 'en'
-    }
-    twitterFetcher.fetch(configProfile);
-
-    // END OF JAMES' SOCIAL MEDIA
-
     // CONTACT JAMES
 
     // Hide content in preparation for dynamic reveal
