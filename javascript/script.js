@@ -94,6 +94,15 @@ $(document).ready(function() {
 
             $('.fact-about-james').css('fontSize', '16px');
         }
+
+        // Adjust photo of myself when on iPhone5 (320px)
+        if ($(window).width() <= 350) {
+            $('#photo-of-james').css('width', '200');
+            $('#photo-of-james').css('height', '200');
+        } else {
+            $('#photo-of-james').css('width', '300');
+            $('#photo-of-james').css('height', '300');
+        }
     }
 
     $(window).resize(function() {
