@@ -3,3 +3,15 @@ body {
     padding: 0px;
     overflow-x: hidden;
 }
+
+.content-section {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.section-heading {
+    font-family: "Raleway";
+    font-size: 45px;
+
+    text-align: left;
+}
