@@ -55,7 +55,33 @@ body {
     text-decoration: underline;
 }
 
+.mid-header-left {
+    font-family: "Raleway";
+    font-size: 37px;
+
+    text-align: left;
+}
+
 
 .logo-wrapper {
     text-align: center;
+}
+
+.p-mid {
+    font-family: "Raleway";
+    font-size: 18px;
+
+    text-align: left;
+}
+
+.padded {
+    padding-bottom: 15px;
+}
+
+.extra-padded {
+    padding-bottom: 30px;
+}
+
+.extra-padding-top {
+    padding-top: 15px;
 }
