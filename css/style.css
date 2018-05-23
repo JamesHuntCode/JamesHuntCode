@@ -13,5 +13,28 @@ body {
     font-family: "Raleway";
     font-size: 45px;
 
-    text-align: left;
+    text-align: center;
+
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.section-light {
+    background-color: #ffffff;
+}
+
+.section-dark {
+    background-color: #E0E0E0;
+}
+
+.skillset-sub-header {
+    font-family: "Raleway";
+    font-size: 30px;
+
+    text-align: center;
+    text-decoration: underline;
+}
+
+.skillset-logo-wrapper {
+    text-align: center;
 }
