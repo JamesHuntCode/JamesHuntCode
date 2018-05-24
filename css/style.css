@@ -5,8 +5,7 @@ body {
 }
 
 .content-section {
-    margin-top: 100px;
-    margin-bottom: 100px;
+    padding: 100px;
 }
 
 .section-heading {
@@ -16,7 +15,6 @@ body {
     text-align: left;
     text-decoration: underline;
 
-    padding-top: 100px;
     padding-bottom: 100px;
 }
 
@@ -44,7 +42,7 @@ body {
     text-decoration: underline;
 
     padding-top: 50px;
-    margin-bottom: 300px;
+    padding-bottom: 20px;
 }
 
 .sub-header-left {
@@ -53,6 +51,15 @@ body {
 
     text-align: left;
     text-decoration: underline;
+}
+
+.footer-link {
+    font-family: "Raleway";
+    font-size: 20px;
+
+    text-align: left;
+
+    padding: 5px 5px 5px 0px;
 }
 
 .mid-header-left {
@@ -74,6 +81,10 @@ body {
     text-align: left;
 }
 
+.center {
+    text-align: center;
+}
+
 .padded {
     padding-bottom: 15px;
 }
@@ -85,3 +96,23 @@ body {
 .extra-padding-top {
     padding-top: 15px;
 }
+
+.copyright {
+    padding-top: 100px;
+}
+
+#footer a {
+    color: #212121;
+}
+
+/*.col1 {
+    margin-left: -15px;
+}
+
+.col2 {
+    margin-left: -60px;
+}
+
+.col3 {
+    margin-left: -70px;
+}*/
