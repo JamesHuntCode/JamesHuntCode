@@ -101,18 +101,14 @@ body {
     padding-top: 100px;
 }
 
+.section-black {
+    background-color: #333;
+}
+
 #footer a {
-    color: #212121;
+    color: #ffffff;
 }
 
-/*.col1 {
-    margin-left: -15px;
+.text-white {
+    color: #ffffff;
 }
-
-.col2 {
-    margin-left: -60px;
-}
-
-.col3 {
-    margin-left: -70px;
-}*/
