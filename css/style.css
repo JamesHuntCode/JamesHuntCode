@@ -81,6 +81,35 @@ body {
     text-align: left;
 }
 
+#email-me-form {
+    width: 100%;
+}
+
+#email-me-form span {
+    color: red;
+}
+
+#email-me-form input {
+    height: 45px;
+    width: 75%;
+
+    font-family: "Raleway";
+    font-size: 18px;
+
+    margin: 15px 0px;
+}
+
+#email-me-form textarea {
+    height: 145px;
+    width: 75%;
+
+    margin: 15px 0px 0px 0px;
+}
+
+#submit-button {
+
+}
+
 .center {
     text-align: center;
 }
