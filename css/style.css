@@ -138,6 +138,12 @@ body {
     color: #ffffff;
 }
 
+#footer a:hover {
+    text-decoration: underline;
+    
+    cursor: pointer;
+}
+
 .text-white {
     color: #ffffff;
 }
