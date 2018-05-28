@@ -53,6 +53,41 @@ body {
     text-decoration: underline;
 }
 
+.skill-set-image {
+    height: 150px;
+    width: 150px;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    margin: 25px auto;
+}
+
+#desktop {
+    background-image: url("../images/desktop.png");
+}
+
+#mobile {
+    background-image: url("../images/mobile.png");
+}
+
+#web {
+    background-image: url("../images/web.png");
+}
+
+#database {
+    background-image: url("../images/database.png");
+}
+
+#user-interface {
+    background-image: url("../images/user-interface.png");
+}
+
+#uml {
+    background-image: url("../images/uml.png");
+}
+
 .footer-link {
     font-family: "Raleway";
     font-size: 20px;
@@ -77,6 +112,13 @@ body {
 .p-mid {
     font-family: "Raleway";
     font-size: 18px;
+
+    text-align: left;
+}
+
+.p-small {
+    font-family: "Raleway";
+    font-size: 16px;
 
     text-align: left;
 }
@@ -140,7 +182,7 @@ body {
 
 #footer a:hover {
     text-decoration: underline;
-    
+
     cursor: pointer;
 }
 
