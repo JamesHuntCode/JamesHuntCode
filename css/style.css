@@ -136,7 +136,6 @@ body {
 }
 
 #email-me-form input {
-    height: 45px;
     width: 80%;
 
     font-family: "Raleway";
@@ -164,7 +163,8 @@ body {
 }
 
 #submit-button {
-
+    height: 50px;
+    cursor: pointer;
 }
 
 .center {
