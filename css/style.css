@@ -61,7 +61,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 
-    margin: 25px auto;
+    margin: 50px auto;
 }
 
 #desktop {
@@ -104,6 +104,10 @@ body {
     text-align: left;
 }
 
+.no-underline {
+    text-decoration: none;
+}
+
 
 .logo-wrapper {
     text-align: center;
@@ -133,19 +137,30 @@ body {
 
 #email-me-form input {
     height: 45px;
-    width: 75%;
+    width: 80%;
 
     font-family: "Raleway";
     font-size: 18px;
 
-    margin: 15px 0px;
+    margin: 0px 0px 15px 0px;
 }
 
 #email-me-form textarea {
     height: 145px;
-    width: 75%;
+    width: 80%;
 
-    margin: 15px 0px 0px 0px;
+    margin: 0px 0px 15px 0px;
+
+    font-family: "Raleway";
+    font-size: 18px;
+}
+
+.network-link {
+    color: #212121;
+}
+
+.network-link:hover {
+    color: #000000;
 }
 
 #submit-button {
