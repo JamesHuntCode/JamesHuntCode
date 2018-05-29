@@ -88,6 +88,44 @@ body {
     background-image: url("../images/uml.png");
 }
 
+.highlight-image {
+    height: 275px;
+    width: 275px;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    margin: 50px auto;
+
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px #333;
+}
+
+#car-hire {
+    background-image: url("../images/car-hire.png");
+}
+
+#rusty-repairs {
+    background-image: url("../images/rusty-repairs.png");
+}
+
+#careers-app {
+    background-image: url("../images/careers-app.png");
+}
+
+#doodle-jump {
+    background-image: url("../images/doodle-jump.png");
+}
+
+#pong {
+    background-image: url("../images/pong.png");
+}
+
+#flappy-bird {
+    background-image: url("../images/flappy-bird.png");
+}
+
 .footer-link {
     font-family: "Raleway";
     font-size: 20px;
