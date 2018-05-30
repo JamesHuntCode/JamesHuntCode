@@ -3,7 +3,7 @@ html {
   height: 100%;
 }
 body {
-  overflow: auto;
+  overflow-x: hidden;
   height: 100%;
 }
 
@@ -12,15 +12,256 @@ body {
  overflow: auto;
 }
 
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+    .section-heading {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .sub-header {
+        font-size: 20px;
+    }
+
+    .sub-header-left {
+        font-size: 20px;
+    }
+
+    .p-mid {
+        font-size: 12px;
+    }
+
+    .footer-content {
+        display: none;
+    }
+
+    .copyright {
+        padding-top: 25px;
+    }
+
+    .skill-set-image {
+        height: 100px;
+        width: 100px;
+    }
+
+    .highlight-image {
+        height: 150px;
+        width: 150px;
+    }
+
+    #email-me-form input, textarea {
+        width: 100%;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+    .section-heading {
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .sub-header {
+        font-size: 25px;
+    }
+
+    .sub-header-left {
+        font-size: 25px;
+    }
+
+    .p-mid {
+        font-size: 12px;
+    }
+
+    .footer-content {
+        display: none;
+    }
+
+    .copyright {
+        padding-top: 25px;
+    }
+
+    .skill-set-image {
+        height: 100px;
+        width: 100px;
+    }
+
+    .highlight-image {
+        height: 150px;
+        width: 150px;
+    }
+
+    #email-me-form input, textarea {
+        width: 100%;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+    .section-heading {
+        font-size: 35px;
+        text-align: left;
+    }
+
+    .sub-header {
+        font-size: 25px;
+    }
+
+    .sub-header-left {
+        font-size: 25px;
+    }
+
+    .sub-header-footer {
+        font-size: 25px;
+    }
+
+    .p-mid {
+        font-size: 14px;
+    }
+
+    .footer-link {
+        font-size: 14px;
+    }
+
+    .footer-content {
+        display: none;
+    }
+
+    .copyright {
+        padding-top: 25px;
+    }
+
+    .skill-set-image {
+        height: 150px;
+        width: 150px;
+    }
+
+    .highlight-image {
+        height: 200px;
+        width: 200px;
+    }
+
+    #email-me-form input, textarea {
+        width: 100%;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+    .section-heading {
+        font-size: 45px;
+        text-align: left;
+    }
+
+    .sub-header {
+        font-size: 30px;
+    }
+
+    .sub-header-left {
+        font-size: 30px;
+    }
+
+    .sub-header-footer {
+        font-size: 30px;
+    }
+
+    .p-mid {
+        font-size: 16px;
+    }
+
+    .footer-link {
+        font-size: 16px;
+    }
+
+    .footer-content {
+        display: unset;
+    }
+
+    .copyright {
+        padding-top: 100px;
+    }
+
+    .skill-set-image {
+        height: 150px;
+        width: 150px;
+    }
+
+    .highlight-image {
+        height: 200px;
+        width: 200px;
+    }
+
+    #email-me-form input, textarea {
+        width: 80%;
+    }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+    .section-heading {
+        font-size: 45px;
+        text-align: left;
+    }
+
+    .sub-header {
+        font-size: 30px;
+    }
+
+    .sub-header-left {
+        font-size: 30px;
+    }
+
+    .sub-header-footer {
+        font-size: 30px;
+    }
+
+    .p-mid {
+        font-size: 16px;
+    }
+
+    .footer-link {
+        font-size: 20px;
+    }
+
+    .footer-content {
+        display: unset;
+    }
+
+    .copyright {
+        padding-top: 100px;
+    }
+
+    .skill-set-image {
+        height: 150px;
+        width: 150px;
+    }
+
+    .highlight-image {
+        height: 275px;
+        width: 275px;
+    }
+
+    #email-me-form input, textarea {
+        width: 80%;
+    }
+}
+
+#photo-of-me {
+    background-image: url("../images/me.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    border-radius: 360px;
+}
+
 .content-section {
     padding: 100px;
 }
 
 .section-heading {
     font-family: "Raleway";
-    font-size: 45px;
 
-    text-align: left;
     text-decoration: underline;
 
     padding-bottom: 100px;
@@ -36,7 +277,6 @@ body {
 
 .sub-header {
     font-family: "Raleway";
-    font-size: 30px;
 
     text-align: center;
     text-decoration: underline;
@@ -44,7 +284,6 @@ body {
 
 .sub-header-footer {
     font-family: "Raleway";
-    font-size: 30px;
 
     text-align: center;
     text-decoration: underline;
@@ -90,16 +329,12 @@ body {
 
 .sub-header-left {
     font-family: "Raleway";
-    font-size: 30px;
 
     text-align: left;
     text-decoration: underline;
 }
 
 .skill-set-image {
-    height: 150px;
-    width: 150px;
-
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -132,9 +367,6 @@ body {
 }
 
 .highlight-image {
-    height: 275px;
-    width: 275px;
-
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -171,18 +403,10 @@ body {
 
 .footer-link {
     font-family: "Raleway";
-    font-size: 20px;
 
     text-align: left;
 
     padding: 5px 5px 5px 0px;
-}
-
-.mid-header-left {
-    font-family: "Raleway";
-    font-size: 37px;
-
-    text-align: left;
 }
 
 .no-underline {
@@ -196,7 +420,6 @@ body {
 
 .p-mid {
     font-family: "Raleway";
-    font-size: 18px;
 
     text-align: left;
 }
@@ -217,8 +440,6 @@ body {
 }
 
 #email-me-form input {
-    width: 80%;
-
     font-family: "Raleway";
     font-size: 18px;
 
@@ -227,7 +448,6 @@ body {
 
 #email-me-form textarea {
     height: 145px;
-    width: 80%;
 
     margin: 0px 0px 15px 0px;
 
@@ -266,10 +486,6 @@ body {
 
 .extra-padding-top {
     padding-top: 15px;
-}
-
-.copyright {
-    padding-top: 100px;
 }
 
 .section-black {
