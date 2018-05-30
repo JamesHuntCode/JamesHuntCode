@@ -1,7 +1,15 @@
-body, html {
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden;
+html {
+  overflow: hidden;
+  height: 100%;
+}
+body {
+  overflow: auto;
+  height: 100%;
+}
+
+/* unset bs3 setting */
+.modal-open {
+ overflow: auto;
 }
 
 .content-section {
@@ -59,6 +67,10 @@ body, html {
 .modal-text {
     padding: 15px 15px 15px 0px;
     font-size: 16px;
+}
+
+#doodle-jump-modal .modal-body {
+    position: relative;
 }
 
 .sub-header-left {
