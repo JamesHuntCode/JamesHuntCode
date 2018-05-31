@@ -14,6 +14,10 @@ body {
 
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px) {
+    .content-section {
+        padding: 25px 0px;
+    }
+
     .dynamic-container {
         width: 97.5%;
     }
@@ -44,8 +48,8 @@ body {
     }
 
     .skill-set-image {
-        height: 100px;
-        width: 100px;
+        height: 75px;
+        width: 75px;
     }
 
     .highlight-image {
@@ -60,6 +64,10 @@ body {
 
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px) {
+    .content-section {
+        padding: 25px 0px;
+    }
+
     .dynamic-container {
         width: 97.5%;
     }
@@ -90,8 +98,8 @@ body {
     }
 
     .skill-set-image {
-        height: 100px;
-        width: 100px;
+        height: 75px;
+        width: 75px;
     }
 
     .highlight-image {
@@ -106,6 +114,10 @@ body {
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
+    .content-section {
+        padding: 50px 0px;
+    }
+
     .dynamic-container {
         width: 97.5%;
     }
@@ -144,8 +156,8 @@ body {
     }
 
     .skill-set-image {
-        height: 150px;
-        width: 150px;
+        height: 100px;
+        width: 100px;
     }
 
     .highlight-image {
@@ -160,6 +172,10 @@ body {
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
+    .content-section {
+        padding: 100px 0px;
+    }
+
     .dynamic-container {
         width: unset;
     }
@@ -214,6 +230,10 @@ body {
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
+    .content-section {
+        padding: 100px 0px;
+    }
+
     .dynamic-container {
         width: unset;
     }
@@ -264,10 +284,6 @@ body {
     #email-me-form input, textarea {
         width: 80%;
     }
-}
-
-.content-section {
-    padding: 100px 0px;
 }
 
 .section-heading {
