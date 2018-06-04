@@ -367,6 +367,8 @@ body {
     background-repeat: no-repeat;
 
     margin: 50px auto;
+
+    cursor: pointer;
 }
 
 #desktop {

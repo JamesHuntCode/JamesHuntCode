@@ -1,6 +1,6 @@
 $(document).ready(function () {
     // Project-Highlights shake on hover:
-    $('.highlight-image').hover(function () {
+    $('.highlight-image, .skill-set-image').hover(function () {
         $(this).addClass('animated pulse').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
             $(this).removeClass('animated pulse');
         });
