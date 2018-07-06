@@ -517,6 +517,10 @@ body {
     padding-top: 15px;
 }
 
+.extra-padding-bottom {
+    margin-bottom: 30px;
+}
+
 .section-black {
     background-color: #333;
 }
