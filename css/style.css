@@ -5,6 +5,7 @@ html {
 body {
   overflow-x: hidden;
   height: 100%;
+  padding-top: 75px;
 }
 
 /* unset bs3 setting */
@@ -284,6 +285,18 @@ body {
     #email-me-form input, textarea {
         width: 80%;
     }
+}
+
+.nav-background {
+    background-color: #333;
+}
+
+.nav-theme a {
+    color: #ffffff;
+}
+
+.nav-theme a:hover {
+    color: #E0E0E0;
 }
 
 .section-heading {
