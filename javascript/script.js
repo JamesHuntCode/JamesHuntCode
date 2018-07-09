@@ -6,53 +6,67 @@ $(document).ready(function () {
         });
     });
 
+    // Scroll to page elements from the navigation bar:
+
+
     // Scroll to page elements from the footer:
     $('#footer a').on('click', function () {
 
         var linkClicked = $(this).text().toUpperCase();
 
-        var scrollToElem = function (where) {
-
-            // Handle scrolling here...
-
-        }
-
         switch (linkClicked) {
+
             case "TOP OF PAGE":
 
-            scrollToElem("navbar");
+            $('html, body').animate({
+                    scrollTop: $("#navbar").offset().top
+            }, 2000);
+
 
             break;
             case "ABOUT ME":
 
-            scrollToElem("about-me");
+            $('html, body').animate({
+                    scrollTop: $("#about-me").offset().top
+            }, 2000);
 
             break;
             case "MY SKILL SET":
 
-            scrollToElem("my-skills");
+            $('html, body').animate({
+                    scrollTop: $("#my-skills").offset().top
+            }, 2000);
 
             break;
             case "PROJECT HIGHLIGHTS":
 
-            scrollToElem("projects");
+            $('html, body').animate({
+                    scrollTop: $("#projects").offset().top
+            }, 2000);
 
             break;
             case "WORK & INTERESTS":
 
-            scrollToElem("current-interests");
+            $('html, body').animate({
+                    scrollTop: $("#current-interests").offset().top
+            }, 2000);
 
             break;
             case "HIRE ME":
 
-            scrollToElem("hire-me");
+            $('html, body').animate({
+                    scrollTop: $("#hire-me").offset().top
+            }, 2000);
 
             break;
             case "CONTACT ME":
 
-            scrollToElem("contact-me");
+            $('html, body').animate({
+                    scrollTop: $("#contact-me").offset().top
+            }, 2000);
 
             break;
+            
         }
     });
 
