@@ -7,7 +7,8 @@ $(document).ready(function () {
     });
 
     // Scroll to page elements from the navigation bar:
-    $('#navbar a').on('click', function () {
+    $('#navbar a').on('click', function (e) {
+        e.preventDefault();
 
         var linkClicked = $(this).text().toUpperCase();
         var selectedElement;
@@ -39,14 +40,15 @@ $(document).ready(function () {
         }
 
         var scrollTo = function(where) {
-            $('html, body').animate({scrollTop: where.offset().top - 50}, 1250);
+            $('html, body').animate({scrollTop: where.offset().top - 50}, 1500);
         }
 
         scrollTo(selectedElement);
     });
 
     // Scroll to page elements from the footer:
-    $('#footer a').on('click', function () {
+    $('#footer a').on('click', function (e) {
+        e.preventDefault();
 
         var linkClicked = $(this).text().toUpperCase();
         var selectedElement;
@@ -81,7 +83,7 @@ $(document).ready(function () {
         }
 
         var scrollTo = function(where) {
-            $('html, body').animate({scrollTop: where.offset().top - 50}, 1250);
+            $('html, body').animate({scrollTop: where.offset().top - 50}, 1500);
             console.log(where.offset().top);
         }
 
