@@ -7,71 +7,90 @@ $(document).ready(function () {
     });
 
     // Scroll to page elements from the navigation bar:
+    $('#navbar a').on('click', function () {
 
+        var linkClicked = $(this).text().toUpperCase();
+        var selectedElement;
+
+        switch (linkClicked) {
+
+            case "JAMESHUNTCODE":
+            selectedElement = $("#navbar");
+            break;
+            case "ABOUT":
+            selectedElement = $("#about-me");
+            break;
+            case "SKILLS":
+            selectedElement = $("#my-skills");
+            break;
+            case "HIGHLIGHTS":
+            selectedElement = $("#projects");
+            break;
+            case "INTERESTS":
+            selectedElement = $("#current-interests");
+            break;
+            case "HIRE ME":
+            selectedElement = $("#hire-me");
+            break;
+            case "CONTACT":
+            selectedElement = $("#contact-me");
+            break;
+
+        }
+
+        var scrollTo = function(where) {
+            $('html, body').animate({scrollTop: where.offset().top - 50}, 1250);
+            console.log(where.offset().top);
+        }
+
+        scrollTo(selectedElement);
+    });
 
     // Scroll to page elements from the footer:
     $('#footer a').on('click', function () {
 
         var linkClicked = $(this).text().toUpperCase();
+        var selectedElement;
 
         switch (linkClicked) {
 
             case "TOP OF PAGE":
-
-            $('html, body').animate({
-                    scrollTop: $("#navbar").offset().top
-            }, 2000);
-
-
+            selectedElement = $("#navbar");
             break;
             case "ABOUT ME":
-
-            $('html, body').animate({
-                    scrollTop: $("#about-me").offset().top
-            }, 2000);
-
+            selectedElement = $("#about-me");
             break;
             case "MY SKILL SET":
-
-            $('html, body').animate({
-                    scrollTop: $("#my-skills").offset().top
-            }, 2000);
-
+            selectedElement = $("#my-skills");
             break;
             case "PROJECT HIGHLIGHTS":
-
-            $('html, body').animate({
-                    scrollTop: $("#projects").offset().top
-            }, 2000);
-
+            selectedElement = $("#projects");
             break;
             case "WORK & INTERESTS":
-
-            $('html, body').animate({
-                    scrollTop: $("#current-interests").offset().top
-            }, 2000);
-
+            selectedElement = $("#current-interests");
             break;
             case "HIRE ME":
-
-            $('html, body').animate({
-                    scrollTop: $("#hire-me").offset().top
-            }, 2000);
-
+            selectedElement = $("#hire-me");
             break;
             case "CONTACT ME":
-
-            $('html, body').animate({
-                    scrollTop: $("#contact-me").offset().top
-            }, 2000);
-
+            selectedElement = $("#contact-me");
             break;
-            
+            case "EMAIL ME":
+            selectedElement = $("#contact-me");
+            break;
+
         }
+
+        var scrollTo = function(where) {
+            $('html, body').animate({scrollTop: where.offset().top - 50}, 1250);
+            console.log(where.offset().top);
+        }
+
+        scrollTo(selectedElement);
     });
 
     // Set Copyright Date
     var copyrightNotice = $('#copyright');
     var year = new Date().getFullYear();
-    copyrightNotice.html("© " + year + " James Hunt All Rights Reserved");
+    copyrightNotice.html("© " + year + " James Hunt");
 });
