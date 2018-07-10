@@ -1,16 +1,15 @@
-html {
-  overflow: hidden;
-  height: 100%;
-}
-body {
+html, body {
   overflow-x: hidden;
-  height: 100%;
-  /*padding-top: 75px;*/
 }
 
 /* unset bs3 setting */
+.modal {
+ overflow-y: auto;
+}
+
 .modal-open {
  overflow: auto;
+ padding-right: 0px !important;
 }
 
 /* Custom, iPhone Retina */

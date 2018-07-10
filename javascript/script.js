@@ -40,7 +40,6 @@ $(document).ready(function () {
 
         var scrollTo = function(where) {
             $('html, body').animate({scrollTop: where.offset().top - 50}, 1250);
-            console.log(where.offset().top);
         }
 
         scrollTo(selectedElement);
