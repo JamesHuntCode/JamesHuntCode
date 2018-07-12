@@ -2,7 +2,6 @@ html, body {
   overflow-x: hidden;
 }
 
-/* unset bs3 setting */
 .modal {
  overflow-y: auto;
 }
@@ -12,15 +11,11 @@ html, body {
  padding-right: 0px !important;
 }
 
-#slideshow
-.carousel,
-.carousel-item,
-.active {
+#slideshow .carousel, .carousel-item, .active {
     height: 100%;
 }
 
-#slideshow
-.carousel-inner {
+#slideshow .carousel-inner {
     height: 100%;
 }
 
@@ -31,6 +26,22 @@ html, body {
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.slide-main {
+    text-shadow: 0px 0px 5px #000;
+}
+
+.slide-sub {
+    padding: 0px !important;
+    margin-top: 0px !important;
+    text-shadow: 0px 0px 5px #333;
+}
+
+.no-p {
+    margin-bottom: 70px !important;
+    padding: 0px !important;
+}
+
 
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px) {

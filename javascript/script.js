@@ -1,12 +1,14 @@
 $(document).ready(function () {
-    // Set the height of the slideshow:
+    // Set the height of the slideshow / set position of text
     var pageHeight = $(window).height() - 50;
     $("#slideshow").css('height', pageHeight + 'px');
+    $('#slideshow h3').css('marginBottom', (pageHeight / 2.5) + 'px');
 
     // Ensure, even when the page is resized, the size remains consistent.
     $(window).resize( function () {
         var pageHeight = $(window).height() - 50;
         $("#slideshow").css('height', pageHeight + 'px');
+        $('#slideshow h3').css('marginBottom', (pageHeight / 2.5) + 'px');
     });
 
     // Project-Highlights shake on hover:
