@@ -1,4 +1,14 @@
 $(document).ready(function () {
+    // Set the height of the slideshow:
+    var pageHeight = $(window).height() - 50;
+    $("#slideshow").css('height', pageHeight + 'px');
+
+    // Ensure, even when the page is resized, the size remains consistent.
+    $(window).resize( function () {
+        var pageHeight = $(window).height() - 50;
+        $("#slideshow").css('height', pageHeight + 'px');
+    });
+
     // Project-Highlights shake on hover:
     $('.highlight-image, .skill-set-image').hover(function () {
         $(this).addClass('animated pulse').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
